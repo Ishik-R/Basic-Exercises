@@ -1,0 +1,22 @@
+//codewars - https://www.codewars.com/kata/51c8991dee245d7ddf00000e
+//8kyu - Reverse words 
+//Python
+//
+//Complete the solution so that it reverses all of the words within the string passed in.
+//
+//I've also experimented an alternative function: reverse_words() which inverses the order of the words and the order of the letters simultaneously
+
+s = "Esse deck é ruim"
+print("Você digitou: " + s)
+
+def reverse_phrase(s):
+  invertido = s.split()
+  invertido.reverse()
+  return ' '.join(invertido)
+
+def reverse_words(s):
+  invertido = ' '.join(palavra[::-1] for palavra in s.split())
+  return invertido
+
+print(reverse_words(s))
+print(reverse_phrase(s))
