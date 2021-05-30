@@ -1,5 +1,5 @@
 //codewars - https://www.codewars.com/kata/5612e743cab69fec6d000077/train/python
-//Grasshopper - Variable Assignment Debug
+//8kyu Grasshopper - Variable Assignment Debug
 //Python
 //
 //Fix the variables assigments so that this code stores the string 'devLab' in the variable name.
