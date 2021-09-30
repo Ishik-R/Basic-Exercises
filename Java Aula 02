@@ -1,0 +1,23 @@
+//AULA 02 - STRING
+//
+//Noções gerais sobre o funcionamento do comando string.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        float ap1 = 0;
+        float ap2 = 9;
+
+        float media = (ap1 + ap2) / 2;
+        System.out.println("Media final: " + media);
+
+        String resultado = media >= 6 ? "Aprovado!" : "Reprovado :c";
+        System.out.println(resultado);
+    }
+}
