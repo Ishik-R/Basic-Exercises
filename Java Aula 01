@@ -1,0 +1,38 @@
+//AULA 01 - COMANDOS BÁSICOS DE JAVA
+//
+//Noções gerais sobre comenado de print, entrada de dados pelo teclado e "if"s.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+    float Peso;
+    float Altura;
+    float Imc;
+
+    System.out.println("Cálculo de IMC. ");
+    System.out.printf("Insira seu peso (em kg): ");
+    Peso = teclado.nextFloat();
+
+    System.out.printf("Insira sua altura (em m): ");
+    Altura = teclado.nextFloat();
+
+    Imc = Peso / (Altura*Altura);
+
+    System.out.println("Seu IMC é: " + Imc);
+
+    if(Imc < 18.5){
+        System.out.println("Seu IMC aponta MAGREZA EXCESSIVA.");
+    } else if (Imc >= 18.5 && Imc <= 24.9) {
+        System.out.println("Seu IMC está NORMAL.");
+    } else if (Imc >= 25 && Imc <= 29.9) {
+        System.out.println("Seu IMC aponta SOBREPESO.");
+    } else if (Imc >= 30 && Imc <= 39.9) {
+        System.out.println("Seu IMC aponta OBESIDADE.");
+    } else if (Imc <= 40) {
+        System.out.println("Seu IMC aponta OBESIDADE GRAVE.");
+    }
+ }
