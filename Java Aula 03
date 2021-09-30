@@ -1,0 +1,37 @@
+//EXERCÍCIOS GERAIS JAVA - SWITCH
+//
+//Noções gerais sobre o funcionamento do comando switch.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.printf("Informe a entrada inicial (a,b,c): ");
+        String letra = teclado.nextLine();
+
+        switch (letra){
+            case "a":
+                System.out.printf("Insira seu nome: ");
+                String nome = teclado.nextLine();
+                System.out.println("Olá " + nome + ", você selecionou a opção a.");
+                break;
+            case "b":
+                System.out.printf("Insira seu nome: ");
+                String nome2 = teclado.nextLine();
+                System.out.println("Olá " + nome + ", você selecionou a opção b.");
+                break;
+            case "c":
+                System.out.printf("Insira seu nome: ");
+                String nome3 = teclado.nextLine();
+                System.out.println("Olá " + nome + ", você selecionou a opção c.");
+                break;
+            default:
+                System.out.println("Entrada não cadastrada!");
+        }
+    }
+}
