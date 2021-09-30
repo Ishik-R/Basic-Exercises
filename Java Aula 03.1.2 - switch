@@ -1,0 +1,56 @@
+//EXERCÍCIOS GERAIS JAVA - SWITCH
+//
+//Noções gerais sobre o funcionamento do comando switch, simulando o pedido de lanches em um cardápio.
+//
+//Esta versão aceita quantidades distintas de lanches; uma possível melhoria seria na exibição dentro dos prints em que são exibidos os preços; preciso verificar como funciona
+//o print com o recurso "%" para a exibição das variáveis no corpo do texto. Quando eu tento compilar eu sempre chego em um erro desconhecido, mesmo seguindo os mesmos passos
+//do procedimento indicado. Para não terminar com um programa que não compila, resolvi escrever do modo abaixo. Menos elegante, reconheço, mas basicamente funcional.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        int quant;
+
+        System.out.println("Olá! Selecione seu lanche digitando o seu código: \n" +
+                "100 - CACHORRO QUENTE \n" +
+                "101 - BAURU SIMPLES \n" +
+                "102 - BAURU COM OVO \n" +
+                "103 - HAMBÚRGUER \n" +
+                "104 - CHEESEBURGER \n" +
+                "105 - REFRIGERANTE 600ML");
+        System.out.printf("Digite o código aqui: ");
+        String codigo = teclado.nextLine();
+
+        System.out.printf("Quantidade: ");
+        quant = teclado.nextInt();
+
+        switch (codigo) {
+            case "100":
+                System.out.println("Lanche selecionado: CACHORRO QUENTE \nPreço: 1,20\n Quantidade: " + quant +"\nTOTAL: " + quant*1.2);
+                break;
+            case "101":
+                System.out.println("Lanche selecionado: BAURU SIMPLES \nPreço: 1,30\n Quantidade: " + quant +"\nTOTAL: " + quant*1.3);
+                break;
+            case "102":
+                System.out.println("Lanche selecionado: BAURU COM OVO \nPreço: 1,50\n Quantidade: " + quant +"\nTOTAL: " + quant*1.5);
+                break;
+            case "103":
+                System.out.println("Lanche selecionado: HAMBÚRGUER \nPreço: 1,20\n Quantidade: " + quant +"\nTOTAL: " + quant*1.2);
+                break;
+            case "104":
+                System.out.println("Lanche selecionado: CHEESEBURGUER \nPreço: 1,30\n Quantidade: " + quant +"\nTOTAL: " + quant*1.3);
+                break;
+            case "105":
+                System.out.println("Lanche selecionado: REFRIGERANTE 600 \nPreço: 1,00\n Quantidade: " + quant +"\nTOTAL: " + quant*1);
+                break;
+            default:
+                System.out.println("Produto não encontrado!");
+        }
+    }
+}
