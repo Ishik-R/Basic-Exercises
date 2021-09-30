@@ -1,0 +1,56 @@
+//EXERCÍCIOS GERAIS JAVA - SWITCH
+//
+//Noções gerais sobre o funcionamento do comando switch, simulando o pedido de lanches em um cardápio.
+//
+//Ainda não vi como introduzir as informações do lanche / código / preço em um vetor; sem necessidade de cadastrar múltiplos lanches no enunciado; o programa deve somente 
+//reconhecer o código do lanche e exibir sua informação e seu preço.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Olá! Selecione seu lanche digitando o seu código: ");
+        System.out.println("100 - CACHORRO QUENTE");
+        System.out.println("101 - BAURU SIMPLES");
+        System.out.println("102 - BAURU COM OVO");
+        System.out.println("103 - HAMBÚRGUER");
+        System.out.println("104 - CHEESEBURGER");
+        System.out.println("105 - REFRIGERANTE 600ML");
+        System.out.printf("Digite o código aqui: ");
+        String codigo = teclado.nextLine();
+
+        switch (codigo) {
+            case "100":
+                System.out.println("Lanche selecionado: CACHORRO QUENTE");
+                System.out.println("Preço: 1,20");
+                break;
+            case "101":
+                System.out.println("Lanche selecionado: BAURU SIMPLES");
+                System.out.println("Preço: 1,30");
+                break;
+            case "102":
+                System.out.println("Lanche selecionado: BAURU COM OVO");
+                System.out.println("Preço: 1,50");
+                break;
+            case "103":
+                System.out.println("Lanche selecionado: HAMBÚRGUER");
+                System.out.println("Preço: 1,20");
+                break;
+            case "104":
+                System.out.println("Lanche selecionado: CHEESEBURGUER");
+                System.out.println("Preço: 1,30");
+                break;
+            case "105":
+                System.out.println("Lanche selecionado: REFRIGERANTE 600");
+                System.out.println("Preço: 1,00");
+                break;
+            default:
+                System.out.println("Produto não encontrado!");
+        }
+    }
+}
