@@ -1,0 +1,39 @@
+//EXERCÍCIOS GERAIS DE JAVA - ESTRUTURAS DE LAÇO
+//
+//Noções gerais sobre a utilização do comando "for" para a criação de um laço. Este algoritmo recebe a entrada de um valor inicial, um final e verifica quais são os números
+//entre eles que são divisíveis sem restos de um terceiro número.
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	    Scanner teclado = new Scanner(System.in);
+
+	    int i;
+	    int f;
+	    int div;
+        int c;
+
+        System.out.printf("Algoritmo de análise de divisores.\nEntre com o valor inicial: ");
+        i = teclado.nextInt();
+        System.out.printf("Entre com o valor final: ");
+        f = teclado.nextInt();
+
+        if(i>f){
+            div = i;
+            i = f;
+            f = div;
+        }
+
+        System.out.printf("Entre com o valor do divisor:");
+        div = teclado.nextInt();
+
+        for(c=i; c<=f; c++){
+            if(c % div == 0){
+                System.out.printf("%d é divisível por %d \n", c, div);
+            }
+        }
+    }
+}
