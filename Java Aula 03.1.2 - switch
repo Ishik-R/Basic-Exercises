@@ -5,6 +5,14 @@
 //Esta versão aceita quantidades distintas de lanches; uma possível melhoria seria na exibição dentro dos prints em que são exibidos os preços; preciso verificar como funciona
 //o print com o recurso "%" para a exibição das variáveis no corpo do texto. Quando eu tento compilar eu sempre chego em um erro desconhecido, mesmo seguindo os mesmos passos
 //do procedimento indicado. Para não terminar com um programa que não compila, resolvi escrever do modo abaixo. Menos elegante, reconheço, mas basicamente funcional.
+//
+//EDIT: INFORMAÇÃO SOBRE O PROBLEMA DO RECURSO "%"
+//O compilador indica que há algo errado com um texto em vermelho. Não consegui identificar isso a princípio devido ao daltonismo.
+//
+//O problema é que o "println" não consegue imprimir com o recurso do "%", mas "format", "printf" e "print" executam:
+//
+//  System.out.println("Imprimindo o float/double %f e o int %d ", a, b); *NÃO COMPILARÁ
+//  System.out.printf("Imprimindo o float\double %f e o int %d ", a, b);  *COMPILA!
 
 package com.company;
 
