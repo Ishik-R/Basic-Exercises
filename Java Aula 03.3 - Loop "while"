@@ -1,0 +1,52 @@
+//EXERCÍCIOS GERAIS DE JAVA - ESTRUTURAS DE LAÇO
+//
+//Noções básicas sobre a utilização da estrutura de laço "while". Análise das médias de uma turma de alunos. O loop com o while apresenta erros quando utilizamos um caractere,
+//uma varável do tipo "String". Ele executa a primeira iteração do loop mas não é possível realizar uma nova entrada. O problema é resolvido ao adotarmos uma variável do tipo
+//"int" para a verificação.
+//
+//DESTAQUE: MÉTODO DE TRUNCAMENTO PARA A EXIBIÇÃO DA VARIÁVEL "media"
+//
+//  System.out.printf("O próximo float será truncado em duas casas após a vírgula: %.2f ");
+//  System.out.printf("O próximo float será truncado em cinco casas após a vírgula: %.5f ");
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double n1, n2, media;
+        int c, nap, nrep, val;
+
+        val = 1;
+        c = 1;
+        nap = 0;
+        nrep = 0;
+
+        while(val == 1){
+            System.out.printf("Informe a nota 1: ");
+            n1 = teclado.nextDouble();
+            System.out.printf("Informe a nota 2: ");
+            n2 = teclado.nextDouble();
+
+            media = (n1+n2)/2;
+
+            if(media >= 7) {
+                System.out.printf("O aluno %d foi aprovado com média %.2f \n", c, media);
+                nap++;
+            } else {
+                System.out.printf("O aluno %d foi reprovado com média %.2f \n", c, media);
+                nrep++;
+            }
+
+            c++;
+            System.out.print("Você deseja inserir a nota de mais um aluno? Digite '1' para continuar: ");
+            val = teclado.nextInt();
+        }
+
+        System.out.printf("\n Quantidade de alunos aprovados: %d \n", nap);
+        System.out.printf("Quantidade de alunos reprovados: %d \n", nrep);
+    }
+}
