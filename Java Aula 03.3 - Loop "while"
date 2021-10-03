@@ -1,8 +1,16 @@
 //EXERCÍCIOS GERAIS DE JAVA - ESTRUTURAS DE LAÇO
 //
 //Noções básicas sobre a utilização da estrutura de laço "while". Análise das médias de uma turma de alunos. O loop com o while apresenta erros quando utilizamos um caractere,
-//uma varável do tipo "String". Ele executa a primeira iteração do loop mas não é possível realizar uma nova entrada. O problema é resolvido ao adotarmos uma variável do tipo
-//"int" para a verificação.
+//uma varável do tipo "String". Ele executa a primeira iteração do loop mas não é possível realizar uma nova entrada. O problema foi resolvido ao adotarmos uma variável do tipo
+//"int" para a verificação, mudando a estratégia.
+//
+//
+// ********** UPDATE: SOBRE O FATO DO PROGRAMA NÃO TER FUNCIONADO COM A VARIÁVEL DO TIPO STRING: **********
+//  O método de entrada utilizado era baseado no ".nextLine", que inseria um "enter" a entrada automaticamente; se trocarmos devidamente as entradas e comparações para a 
+//verificação de uma variável do tipo "String" e utilizarmos no local de entrada somente ".next" o programa irá rodar corretamente.
+//
+//      val = teclado.next(); *COMPILA; OBS: este método de entrada NÃO ACEITA ESPAÇOS
+//      val = teclado.nextLine(); *NÃO COMPILA; o teclado salva toda interação 
 //
 //DESTAQUE: MÉTODO DE TRUNCAMENTO PARA A EXIBIÇÃO DA VARIÁVEL "media"
 //
