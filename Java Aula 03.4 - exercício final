@@ -1,0 +1,82 @@
+//EXERCÍCIOS GERAIS DE JAVA: REVISÃO DA AULA 03
+//
+//Problema proposto para ser resolvido no final da aula 03; utilização de uma interface básica utilizando o "while" para executar indefinidamente o programa enquanto o "switch"
+//atua como um selecionador de opções.
+//
+//ENUNCIADO DO PROBLEMA:
+//
+//Faça um programa que receba do usuário um número e mostre um menu para selecionar o tipo de cálculo
+//a ser realizado:
+//
+//  1. Raiz quadrada
+//  2. A metade
+//  3. 10% do número
+//  4. O dobro
+//  5. Sair
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	    Scanner teclado = new Scanner(System.in);
+
+	    int c;
+		  float a, aux;
+		  String val;
+  
+	  	c = 0;
+		  val = "0";
+  
+	  	while(c != 5){
+		  	System.out.printf("Insira o número para a operação: ");
+			  a = teclado.nextFloat();
+  
+	  		System.out.printf("Selecione a opção desejada: \n" +
+		  					"1. Raiz quadrada \n" +
+			  				"2. A metade \n" +
+				  			"3. Um décimo do número \n" +
+					  		"4. O dobro \n" +
+						  	"5. Sair \n" +
+							  "* ");
+  			c = teclado.nextInt();
+  
+	  		if(c == 1){
+		  		val = "1";
+			  } else if (c == 2){
+			  	val = "2";
+  			} else if (c == 3){
+	  			val = "3";
+		  	} else if (c == 4){
+			  	val = "4";
+			  } else if (c == 5){
+				  val = "5";
+			  } else{
+			  	val = "6";
+				  System.out.printf("Entrada inválida! \n");
+			  }
+  
+	  		switch(val) {
+		  		case "1":
+			  		System.out.printf("Raiz quadrada de %f : %.2f \n", a, Math.sqrt(a));
+				  	break;
+				  case "2":
+				  	System.out.printf("A metade de %f : %.2f \n", a, a / 2);
+				  	break;
+				  case "3":
+			  		System.out.printf("Um décimo de %f : %.2f \n", a, a * 0.1);
+				  	break;
+				  case "4":
+					  System.out.printf("O dobro de %f : %.2f \n", a, a * 2);
+					  break;
+				  default:
+					  if (val == "5") {
+						  c = 5;
+						  System.out.printf("Encerrando o algoritmo. Obrigado! \n");
+					  }
+					  break;
+        }
+      }
+  }
+}
