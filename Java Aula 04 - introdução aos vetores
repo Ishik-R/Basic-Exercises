@@ -1,0 +1,27 @@
+//AULA 04 - INTRODUÇÃO AOS VETORES
+//
+//  Aula que apresenta a função e utilização de funções básicas dos vetores; o vetor é uma maneira de dispor diversas informações indexadas a uma varável. Seu tamanho deve ser
+//declarado previamente.
+//  Por ser um objeto, tem acesso a diversas funções específicas aos objetos (".length", entre outros).
+//
+//      int n[] = {45, 35, 25, 15, 5};  *DECLARAÇÃO DE VALORES DENTRO DE UM VETOR
+//      int n[] = new int[10];          *CRIAÇÃO DE UM VETOR QUE ARMAZENA 10 POSIÇÕES
+//      int tamanho = n.length;         *VERIFICAÇÃO DA QUANTIDADE DE ELEMENTOS EM UM VETOR
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        int n[] = new int[5];
+
+        n[0]=12;
+        n[1]=23;
+        n[2]=47;
+        n[3]=58;
+        n[4]=70;
+
+        for(int i=0; i<n.length; i++){
+            System.out.printf("No índice %d , que está na posição %d , temos o valor %d \n", i, i+1, n[i]);
+        }
+    }
+}
