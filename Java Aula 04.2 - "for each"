@@ -1,0 +1,16 @@
+//AULA 04 - EXEMPLO DO "FOR EACH"
+//
+//  O recurso "for each" varre todos os elementos de um determinado vetor, sem a necessidade de um meio para contar qual elemento estamos varrendo. Como qualquer outro elemento
+//utilze conforme a necessidade
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        int dias[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+        for (int valor : dias){
+            System.out.println("Número sendo impresso na tela: " + valor);
+        }
+    }
+}
