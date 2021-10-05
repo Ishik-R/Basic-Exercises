@@ -1,0 +1,37 @@
+//AULA 04 - INTRODUÇÃO AS COLEÇÕES - SET
+//
+//  *SET - "Set" é uma interface e "HashSet" é o modo de sua implementação.
+//
+//  Enquanto que o LIST indica uma sequência ordenada de elementos (controle e acesso preciso por meio de um referenciamento por índices), o SET é uma lista distinta de elementos 
+//que não é ordenada.
+//
+//  O SET não admite elementos duplicados.
+//
+//  Essa interface modela a abstração do conjunto matemático.
+
+package com.company;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<String> nomes = new HashSet<>();
+
+        nomes.add("Ricardo");
+        nomes.add("Ana");
+        nomes.add("Yoshi");
+        nomes.add("Lavinia");
+
+        for(Object nome : nomes){
+            System.out.println("Nome: " + nome);
+        }
+
+        System.out.println("\nSegunda iteração");
+
+        nomes.add("Bruno");
+        for(Object nome : nomes){
+            System.out.println("Nome: " + nome);
+        }
+    }
+}
