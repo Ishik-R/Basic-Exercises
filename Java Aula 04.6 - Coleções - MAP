@@ -1,0 +1,38 @@
+//AULA 04 - INTRODUÇÃO AS COLEÇÕES - MAP
+//
+//  *MAP - "Map" é uma interface que mapeia valores para chaves. É possível acessar o valor através de uma chave específica; não é possível repetir chaves (caso ocorra a 
+//repetição a última entrada sobreescreve a mais antiga). "HashMap" é seu modo de implementação
+//
+//  Os elementos do Map não são ordenados (assim como o do Set), mas no momento de sua implementação é possível adicionar um termo para que ele passe a respeitar a ordem de
+//inserção:
+//
+//        Map<String,String> nomes = new HashMap<>();         *NÃO OBEDECE A ORDEM DE INSERÇÃO (adicionar novos elementos randomiza a ordem da lista)
+//        Map<String,String> nomes = new LinkedHashMap<>();   *OBEDECE A ORDEM DE INSERÇÃO
+//
+//  O termo "Linked" pode inclusive ser utilizado com a interface Set para torná-la ordenada.
+
+
+package com.company;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<String,String> nomes = new HashMap<>();
+
+        nomes.put("Duress", "Coagir");
+        nomes.put("Fatal Push", "Empurrão Fatal");
+        nomes.put("Counterspell", "Contramágica");
+
+        for(String key : nomes.keySet()){
+            System.out.println("Nome: " + key);
+        }
+        for(String key : nomes.values()){
+            System.out.println("Nome em português: " + key);
+        }
+        for(Map.Entry<String, String> entry: nomes.entrySet()){
+            System.out.println("*Nome: " + entry.getKey() + "  *Nome em português: " + entry.getValue());
+        }
+    }
+}
