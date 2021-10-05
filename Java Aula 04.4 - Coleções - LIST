@@ -1,0 +1,50 @@
+//AULA 04 - INTRODUÇÃO AS COLEÇÕES - LIST
+//
+//  Collections framework é um conjunto bem definido de classes e interfaces para representar e tratar conjuntos de dados como uma única unidade.
+//
+//  As coleções podem ser "ordenadas" ou "classificadas / sortidas".
+//
+//  *LIST - "List" é uma interface e "ArrayList" é o modo de sua implementação.
+//
+//  Acessando alguns recursos interessantes das listas:
+//
+//    nomeDaLista.add( ... );           *ADICIONA UM OBJETO A LISTA
+//               .addAll(outraLista);   *ADICIONA TODOS OS ELEMENTOS DE OUTRA LISTA
+//               .get( 'índice' );      *VERIFICA O QUE ESTÁ PRESENTE NO ÍNDICE DETERMINADO (índice como int)
+//               .size();               *RETORNA O NÚMERO DE OBJETOS PRESENTES NA LISTA
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> compras = new ArrayList<>();
+        List<String> compras2 = new ArrayList<>();
+
+        compras.add("Arroz");
+        compras.add("Feijão");
+        compras.add("Detergente");
+
+        compras2.add("Macarrão");
+        compras2.add("Batata");
+        compras2.add("Farinha de trigo");
+
+        for (Object item : compras){
+            System.out.println("Você deve comprar " + item);
+        }
+
+        compras.addAll(compras2);
+        Collections.sort(compras);
+
+        System.out.println("Exibindo a combinação das duas listas: ");
+        for (Object item : compras){
+            System.out.println("Você deve comprar " + item);
+        }
+
+        int indice = Collections.binarySearch(compras, "Arroz");
+        System.out.println("O indice é " + indice);
+    }
+}
