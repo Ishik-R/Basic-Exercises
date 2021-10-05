@@ -6,7 +6,7 @@
 //
 //  *LIST - "List" é uma interface e "ArrayList" é o modo de sua implementação.
 //
-//  Acessando alguns recursos interessantes das listas:
+//  Acessando alguns recursos interessantes das coleções (ou seja, outras coleções podem utilizar esses comandos):
 //
 //    nomeDaLista.add( ... );           *ADICIONA UM OBJETO A LISTA
 //               .addAll(outraLista);   *ADICIONA TODOS OS ELEMENTOS DE OUTRA LISTA
