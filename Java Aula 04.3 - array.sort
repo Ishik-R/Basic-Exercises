@@ -1,0 +1,27 @@
+//AULA 04 - EXEMPLO DO USO DO ARRAY.SORT
+//
+//  O "arrray.sort" é um dos muitos recursos que podem ser utilizados para trabalhar com arrays em Java. Os arrays, por sua vez, são conhecidos por "vetores", um modo de armazenar
+//uma série de informações relacionadas a uma única variável.
+//
+//  *** RECOMENDAÇÃO ***
+//  Já que existem tantos recursos disponíveis para arrays é interessante verificar como eles funcionam.
+
+package com.company;
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int n[] = {0, 3, 6, 30, 31, 50, 31, 90, 35, 61, 70, 7};
+
+        for (int valor : n){
+            System.out.printf("Número sendo impresso na tela: %d \n", valor);
+        }
+
+        Arrays.sort(n);
+
+        for (int valor : n){
+            System.out.printf("Valores em ordem crescente: %d \n", valor);
+        }
+    }
+}
