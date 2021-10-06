@@ -1,0 +1,51 @@
+//AULA 4 - EXERCÍCIO 2
+//
+//  Escreva um algoritmo que contenha 5 nomes pré-cadastrados, numerados de 1 a 5, e que permita com que um dos nomes seja deletado conforme a entrada do usuário.
+//
+//  Feita a escolha do usuário o programa deverá mostrar na tela os quatro nomes restantes na lista. 
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+import static java.util.Collections.addAll;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        List<String> lista = new ArrayList<>();
+        List<String> lista2 = new ArrayList<>();
+
+        System.out.printf("Nomes pré-cadastrados no programa: \n");
+
+        lista.add("Tainá");
+        lista.add("Diogo");
+        lista.add("Robson");
+        lista.add("Victor");
+        lista.add("Lucas");
+
+        for(int i=0; i<lista.size(); i++){
+            System.out.printf("%d. %s\n", i+1, lista.get(i));
+        }
+
+        System.out.printf("Qual dos nomes você deseja excluir da lista?\nInserir número: ");
+        int v = teclado.nextInt();
+
+        lista2.addAll(lista);
+        lista.remove(v-1);
+        lista2.set(v-1, "*nome deletado*");
+
+        System.out.printf("\nNomes restantes (lista reformulada):\n");
+        for(int i=0; i<lista.size(); i++){
+            System.out.printf("%d. %s\n", i+1, lista.get(i));
+        }
+
+        System.out.printf("\nNomes restantes (lista com a mesma quantidade de elementos):\n");
+        for(int i=0; i<lista2.size(); i++){
+            System.out.printf("%d. %s\n", i+1, lista2.get(i));
+        }
+    }
+}
