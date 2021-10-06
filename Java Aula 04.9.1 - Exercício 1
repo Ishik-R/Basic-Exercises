@@ -1,0 +1,33 @@
+//AULA 4 - EXERCÍCIOS
+//
+//  Escreva um algoritmo que receba 5 nomes diferentes em um ArrayList e retorne a ordem inversa a qual eles foram cadastrados.
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        List<String> lista = new ArrayList<>();
+
+        System.out.printf("O programa irá receber cinco nomes diferentes. \n");
+
+        for(int i = 1; i<=5; i++){
+            System.out.print("Entre com o nome " + i + ": ");
+            lista.add(teclado.nextLine());
+        }
+
+        System.out.println("\nOs nomes serão exibidos na ordem inversa: ");
+
+        Collections.reverse(lista);
+
+        for (Object nome : lista){
+            System.out.println(nome);
+        }
+    }
+}
