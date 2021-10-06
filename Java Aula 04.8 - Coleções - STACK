@@ -1,0 +1,30 @@
+//AULA 04 - INTRODUÇÃO AS COLEÇÕES - STACK
+//
+//  *STACK - "Stack" é uma coleção que permite a utilização de funções específicas para a ordenação de informações em seu interior.
+//
+//  Stack acaba sendo uma função similar ao Queue no que se refere a ideia geral por trás delas: uma fila ordenada ou uma pilha ordenada.
+
+package com.company;
+
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<String> nomes = new Stack<>();
+
+        nomes.push("Counterspell");
+        nomes.push("Duress");
+        nomes.push("Lightning Bolt");
+        nomes.push("Path to Exile");
+
+        System.out.println("A fila é: " + nomes);
+
+        System.out.println("O elemento da vez é: " + nomes.peek());
+
+        System.out.println("A fila agora é: " + nomes);
+
+        System.out.println("O elemento da vez é: " + nomes.pop());
+
+        System.out.println("A fila agora é: " + nomes);
+    }
+}
