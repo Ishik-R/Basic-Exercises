@@ -1,0 +1,29 @@
+//AULA 04 - INTRODUÇÃO AS COLEÇÕES - QUEUE
+//
+//  *QUEUE - "Queue" é uma coleção na qual é possível criar e manter uma lista de prioridades, num conceito de fila ou de pilha.
+
+package com.company;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<String> nomes = new PriorityQueue<>();
+
+        nomes.add("Counterspell");
+        nomes.add("Duress");
+        nomes.add("Lightning Bolt");
+        nomes.add("Path to Exile");
+
+        System.out.println("A fila é: " + nomes);
+
+        System.out.println("O elemento da vez é: " + nomes.peek());   *VERFICANDO O PRIMEIRO ELEMENTO
+
+        System.out.println("A fila agora é: " + nomes);
+
+        System.out.println("O elemento da vez é: " + nomes.poll());   *VERIFICANDO O PRIMEIRO ELEMENTO E RETIRANDO ELE DA FILA
+
+        System.out.println("A fila agora é: " + nomes);
+    }
+}
