@@ -1,0 +1,16 @@
+//AULA 05 - EXERCÍCIO 3
+//
+//  *** CONTINUAÇÃO DO EXERCÍCIO 2 DA MESMA AULA ***
+//
+//  Adicionar as seguintes classes no resultado da prática anterior:
+//
+//    *Produto
+//      - long codigo
+//      - String nome
+//      + consultaNome() : retorna a String nome
+//
+//    *Compra
+//      - pessoa Pessoa
+//      - produto Produto
+//      + void comprar(pessoa Pessoa, produto Produto) : sendo uma função do tipo void, ela não deve retornar nada para a main, somente processar a compra de um produto
+//      + verificarCompra() : retorna uma String com informações sobre a última compra realizada e serve como confirmação final
