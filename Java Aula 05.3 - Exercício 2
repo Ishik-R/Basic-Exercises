@@ -1,0 +1,138 @@
+//AULA 5 - EXERCÍCIO 2
+//
+//  *** PRÁTICA INTRODUTÓRIA A RELAÇÃO ENTRE OBJETOS ***
+//
+//  Desenvolva um programa que receba os seguintes dados:
+//
+//  *OBJETO: Pessoa
+//    - String nome
+//    - Endereco endereco (chamado de "end" por preferência)
+//    - String numero
+//    + consultaEndereco - deve imprimir o endereço da respectiva pessoa
+//    + consultaNome - deve imprimir o nome da pessoa
+//
+//  *OBJETO: Endereco
+//    - String logradouro
+//    - String cidade
+//    - String estado
+//    + consultaLogradouro() - deve imprimir o logradouro
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        Endereco e1 = new Endereco("Av. Batata", "Gotham", "Paraná");
+        Pessoa p1 = new Pessoa("Murilo", e1, "256");
+
+        Endereco e2 = new Endereco();
+        e2.setLogradouro("Morro Xixová");
+        e2.setCidade("Zaun");
+        e2.setEstado("Gasoso");
+        Pessoa p2 = new Pessoa();
+        p2.setNome("Vitória");
+        p2.setEnd(e2);
+        p2.setNumero("87");
+
+        System.out.println("Consulta de endereço e nome de p1: ");
+        p1.consultaEndereco();
+        p1.consultaNome();
+
+        System.out.println("Consulta de endereço e nome de p2:");
+        p2.consultaEndereco();
+        p2.consultaNome();
+
+        System.out.println("Consulta de logradouros dos endereços e1 e e2:");
+        e1.consultaLogradouro();
+        e2.consultaLogradouro();
+    }
+}
+
+public class Pessoa {
+    String nome;
+    Endereco end;
+    String numero;
+
+    public Pessoa(){
+    }
+
+    public Pessoa(String nome, Endereco endereco, String numero){
+        this.nome = nome;
+        this.end = endereco;
+        this.numero = numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Endereco getEnd() {
+        return end;
+    }
+
+    public void setEnd(Endereco end) {
+        this.end = end;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void consultaEndereco(){
+        System.out.println("O endereço da(o) " + nome + " é " + end.getLogradouro() + ", " + end.getCidade() + " - " + end.getEstado() + ".");
+    }
+
+    public void consultaNome(){
+        System.out.println("O nome da pessoa é " + nome);
+    }
+}
+
+public class Endereco {
+    String logradouro;
+    String cidade;
+    String estado;
+
+    public Endereco(){
+    }
+
+    public Endereco(String logradouro, String cidade, String estado){
+        this.logradouro = logradouro;
+        this.cidade = cidade;
+        this.estado = estado;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public void consultaLogradouro(){
+        System.out.printf("Logradouro: %s\n", logradouro );
+    }
+}
