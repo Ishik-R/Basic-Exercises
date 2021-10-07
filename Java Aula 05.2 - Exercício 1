@@ -1,0 +1,61 @@
+//AULA 05 - EXERCÍCIO 1
+//
+//  *Enunciado do exercício: crie uma classe para uma pessoa com as seguintes características:
+//    
+//    - Atributos: nome, idade, CNH
+//    - Métodos: comer, dirigir, dormir
+//
+//  *** OBSERVAÇÃO: aqui está reunido somente as linhas de código da classe "Pessoa"; o foco do exercício não foi acessar e atribuir valores a ela, somente criá-la.
+
+package com.company;
+
+public class Pessoa {
+    String nome;
+    int idade;
+    String cnh;
+
+    public pessoa(){
+    }
+
+    public Pessoa(String nome, int idade, String cnh) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cnh = cnh;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
+    }
+
+    public void comer(){
+        System.out.println("Pessoa comendo.");
+    }
+
+    public void dirigir(){
+        System.out.println("Pessoa dirigindo.");
+    }
+
+    public boolean dormir(){
+        return true;
+    }
+}
