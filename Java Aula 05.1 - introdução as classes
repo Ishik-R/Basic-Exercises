@@ -1,0 +1,123 @@
+//AULA 05 - INTRODUÇÃO AS CLASSES
+//
+//  Para a programação orientada a objetos não utilizaremos de variáveis para armazenar e trabalhar com os dados diretamente. Ao invés disso as informações podem ser trabalhadas
+//em pequenas porções de informações, que inclusive podem delimitar rotinas de funcionamento e executar automaticamente certas funcionalidades pré-estabelecidas. Estas são
+//algumas das possíveis utilidades do trabalho com as classes.
+//
+//  No compilador "Intellij IDEA" é possível criar um espaço separado para se trabalhar com uma nova classe: no canto esquerdo da tela há uma série de pastas. Quando criamos um
+//programa com as configurações padrões é possível ver que logo abaixo da pasta "com.company" existe a public.class "Main". Nesta Main, pela configuração padrão, é o local onde 
+//seu programa irá rodar. 
+//
+//  Clicando com o botão direito sobre a pasta "com.company" é possível visualizar uma série de opções. Para criar uma nova classe em um ambiente separado, selecione "New" e 
+//então "class". Em seguida basta apenas nomear sua classe do modo que for mais conveniente.
+//
+//  A partir do espaço de sua Main é possível acessar os dados de uma classe, fazer com que a classe processe os dados que fornecemos a ela e que ela retorne valores para nossa
+//Main. E porque não fazer isso diretamente no espaço da Main? Bem, dependendo da escala de sua operação isso requer que um mesmo comando de código seja reescrito diversas vezes
+//para cada execução. Criar uma classe já deixa preparada uma série de comandos, tanto para armazenamento, processamento e retorno, que pode ser utilizado em qualquer momento
+//ao longo do programa.
+//
+//  *** INFORMAÇÕES E DICAS ***
+//
+//  Este arquivo exibirá o "Main" e nossa classe "Carro" em conjunto. Na interface do Intellij IDEA é possível organizar as linhas de código em duas abas separadas.
+//
+//  Na aba de classe, ao clicarmos com o botão direito em qualquer espaço no compilador haverá a possibilidade de utilizar o comando "Generate..." para criar automaticamente os
+//"get"s e "set"s para sua classe. É a automatização de algumas boas dezenas de linhas de código.
+
+
+//MAIN:
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        //Instanciando um carro
+        Carro meuCarro = new Carro();
+
+        //Atribuir valores aos atributos
+        meuCarro.setModelo("Corsa");
+        meuCarro.setCor("Prata");
+        meuCarro.setPlaca("ABC0000");
+        meuCarro.setAno(2010);
+
+        //Instanciando e atribuindo
+        Carro carro2 = new Carro("Uno", "Preto", "DDD9090", 2014);
+
+        //Acessando os valores para exibição
+        System.out.println("Modelo do meu carro: " + meuCarro.getModelo());
+        System.out.println("Cor do meu carro: " + meuCarro.getCor());
+        System.out.println("Placa do meu carro: " + meuCarro.getPlaca());
+        System.out.println("Ano do meu carro: " + meuCarro.getAno());
+
+        System.out.println("\nPintei meu carro, agora ele será azul.");
+        meuCarro.setCor("Azul");
+        System.out.printf("Cor do meu carro: %s\n", meuCarro.getCor());
+
+        System.out.printf("Travando o segundo carro: ");
+        carro2.travar();
+    }
+}
+
+
+//CLASS: CARRO
+package com.company;
+
+public class Carro {
+
+    //Atributos do carro:
+    String modelo;
+    String cor;
+    String placa;
+    int ano;
+
+    //Construtor vazio
+    public Carro(){
+    }
+
+    public Carro(String modelo, String cor, String placa, int ano){
+        this.modelo = modelo;
+        this.cor = cor;
+        this.placa = placa;
+        this.ano = ano;
+    }
+
+    //GET e SET: armazenamento e retorno de valores dentro das classes
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    //Métodos
+    public void travar(){
+        System.out.println("*BEEEP*");
+    }
+
+    public void destravar(){
+        System.out.println("*BEEEP BEEEP*");
+    }
+}
