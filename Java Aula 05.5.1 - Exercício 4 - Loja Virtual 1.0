@@ -1,0 +1,63 @@
+//AULA 5 - EXERCÍCIO 4
+//
+//  *** DESENVOLVIMENTO DA INTERAÇÃO NO MAIN ***
+//
+//  Agora, com todas as classes devidamente construídas, construa as interações dentro do Main
+//
+//  *INSTRUÇÕES DO ENUNCIADO:
+//    - inicialmente, a classe deve criar 2 objetos do tipo Produto (crie os objetos com as informações que desejar).
+//    - o usuário faz um cadastro (criando um objeto do tipo Pessoa)
+//    - em seguida, o usuário seleciona entre os dois produtos cadastrados
+//    - dependendo da escolha, é acessado o método da classe Compra, e passado como parâmetro o objeto Pessoa que ele cadastrou e do Produto escolhido
+//    - logo após, é exibido no console ao usuário uma mensagem de confirmação exibindo o nome dele e do produto comprado e acesso ao método verificarCompra()
+//    - verificada e confirmada a compra, finalize a aplicação
+//
+//  *** VERSÃO 1.0 ***
+//    - os diferentes produtos estão organizados em um ArrayList (estoque)
+//    - os diferentes produtos são mostrados em um menu por meio de um "for each"
+//    
+//  *** PLANEJAMENTO PARA A VERSÃO 2.0 ***
+//    - menu de inserção dos dados do usuário
+//    - em seguida, a próxima etapa é criar o algoritmo que efetua a compra
+//    - OPCIONAL: o enunciado deixa claro que somente uma compra será realizada; porém, é possível criar uma interface que permita mais de uma operação de compra
+//
+//  *** OBSERVAÇÃO ***
+//
+//  Todas as classes que estão sendo utilizadas estão salvas nos exercícios anteriores desta aula (Aula 05.2 ~ Aula 05.4). Salvarei aqui somente o main. A versão final, com todas
+//as classes e o main será exibida no "Aula 05.5.2".
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        Endereco e1 = new Endereco("Av. Batata", "Gotham", "Paraná");
+        Pessoa p1 = new Pessoa("Murilo", e1, "256");
+
+        System.out.println("Consulta de endereço e nome de p1: ");
+        p1.consultaEndereco();
+        p1.consultaNome();
+
+        System.out.println("Consulta de logradouros dos endereços e1 e e2:");
+        e1.consultaLogradouro();
+
+        Produto cd1 = new Produto(10001, "Grande Encontro 2015");
+        Produto cd2 = new Produto(10002, "Summer Eletrohits 2000");
+        Produto cd3 = new Produto(10003, "Sandy e Junior: Mudança das Estações");
+        List<Produto> estoque = new ArrayList<>();
+
+        estoque.add(cd1);
+        estoque.add(cd2);
+        estoque.add(cd3);
+
+        Compra cl = new Compra();
+
+        System.out.println("*** LOJA PROTÓTIPO ***");
+        System.out.println("Verifique nossa lista de produtos:");
+        for(int i=0; i< estoque.size(); i++){
+            System.out.println(i+1 + ". Código: " + estoque.get(i).getCodigo() + " - " + estoque.get(i).getNome());
+        }
+    }
+}
