@@ -1,0 +1,13 @@
+//AULA 5 - EXERCÍCIO 4
+//
+//  *** DESENVOLVIMENTO DA INTERAÇÃO NO MAIN ***
+//
+//  Agora, com todas as classes devidamente construídas, construa as interações dentro do Main
+//
+//  *INSTRUÇÕES DO ENUNCIADO:
+//    - inicialmente, a classe deve criar 2 objetos do tipo Produto (crie os objetos com as informações que desejar).
+//    - o usuário faz um cadastro (criando um objeto do tipo Pessoa)
+//    - em seguida, o usuário seleciona entre os dois produtos cadastrados
+//    - dependendo da escolha, é acessado o método da classe Compra, e passado como parâmetro o objeto Pessoa que ele cadastrou e do Produto escolhido
+//    - logo após, é exibido no console ao usuário uma mensagem de confirmação exibindo o nome dele e do produto comprado e acesso ao método verificarCompra()
+//    - verificada e confirmada a compra, finalize a aplicação
