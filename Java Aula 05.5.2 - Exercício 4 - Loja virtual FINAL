@@ -11,3 +11,238 @@
 //    - dependendo da escolha, é acessado o método da classe Compra, e passado como parâmetro o objeto Pessoa que ele cadastrou e do Produto escolhido
 //    - logo após, é exibido no console ao usuário uma mensagem de confirmação exibindo o nome dele e do produto comprado e acesso ao método verificarCompra()
 //    - verificada e confirmada a compra, finalize a aplicação
+//
+//  *** VERSÃO FINAL ***
+//  *LIMITAÇÕES:
+//    - sem um array específico para armazenamento de quais e quantos produtos foram comprados.
+//    - sem um comando específico para confirmar / negar a operação de uma compra.
+//    - sem a opção de editar o usuário uma vez que os dados cadastrais forem preenchidos.
+//    - execução linear: uma vez entrado os dados, o loop se manterá somente dentro das operações de compra
+//    - baixa otimização do uso das classes criadas (já que elas foram criadas por propostas de exercícios anteriores. Priorizei minha linha de raciocínio para a construção do
+//algoritmo).
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        Endereco e = new Endereco();
+        Pessoa p = new Pessoa();
+
+        //CRIAÇÃO DOS PRODUTOS EM ESTOQUE
+        Produto cd1 = new Produto(10001, "Grande Encontro 2015");
+        Produto cd2 = new Produto(10002, "Summer Eletrohits 2000");
+        Produto cd3 = new Produto(10003, "Sandy e Junior: Mudança das Estações");
+        List<Produto> estoque = new ArrayList<>();
+        estoque.add(cd1);
+        estoque.add(cd2);
+        estoque.add(cd3);
+
+        System.out.println("*** LOJA PROTÓTIPO ***\n\nOlá, insira o seu nome:");
+        p.setNome(teclado.nextLine());
+
+        System.out.printf("\nOlá %s, vamos criar seu cadastro!", p.getNome());
+        System.out.println("Por favor, informe seu logradouro: ");
+        e.setLogradouro(teclado.nextLine());
+        System.out.println("Número: ");
+        p.setNumero(teclado.nextLine());
+        System.out.println("Cidade: ");
+        e.setCidade(teclado.nextLine());
+        System.out.println("Estado: ");
+        e.setEstado(teclado.nextLine());
+
+        System.out.printf("\n%s, verifique nossa incrível lista de produtos:\n", p.getNome());
+        for(int i=0; i< estoque.size(); i++){
+            System.out.println(i+1 + ". Código: " + estoque.get(i).getCodigo() + " - " + estoque.get(i).getNome());
+        }
+
+        //ESTRUTURA DE COMPRA: COMPORTA MÚLTIPLOS CICLOS DE COMPRA ENQUANTO FOR DO DESEJO DO USUÁRIO
+        String val = "sim";
+        while((val.equals("sim")) || (val.equals("revisar"))){
+            System.out.println("Selecione o produto de sua escolha digitando o número dele:");
+            int selecionador = (teclado.nextInt() - 1);
+            Compra processador = new Compra();
+            processador.setPessoa(p);
+            processador.setProduto(estoque.get(selecionador));
+            processador.comprar(p, estoque.get(selecionador));
+
+            while((val.equals("sim")) || (val.equals("revisar"))) {
+                System.out.printf("\n%s, você deseja revisar o produto selecionado? Digite revisar para revisar seu pedido", p.getNome());
+                System.out.printf("\n%s, você também pode digitar sim para comprar novamente.\n", p.getNome());
+                val = teclado.next();
+                if (val.equals("revisar")) {
+                    processador.verificarCompra();
+                }else{
+                    break;
+                }
+            }
+        }
+        System.out.printf("Muito obrigado " + p.getNome() + ", seus pedidos serão enviados para: " + e.getLogradouro() + ", " + e.getCidade() + ", " + e.getEstado() + ".");
+    }
+}
+
+//CLASSE PESSOA
+public class Pessoa {
+    String nome;
+    Endereco end;
+    String numero;
+
+    public Pessoa(){
+    }
+
+    public Pessoa(String nome, Endereco endereco, String numero){
+        this.nome = nome;
+        this.end = endereco;
+        this.numero = numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Endereco getEnd() {
+        return end;
+    }
+
+    public void setEnd(Endereco end) {
+        this.end = end;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void consultaEndereco(){
+        System.out.println(end.getLogradouro() + ", " + end.getCidade() + " - " + end.getEstado() + ".");
+    }
+
+    public void consultaNome(){
+        System.out.println("O nome da pessoa é " + nome);
+    }
+}
+
+//CLASSE ENDEREÇO
+public class Endereco {
+    String logradouro;
+    String cidade;
+    String estado;
+
+    public Endereco(){
+    }
+
+    public Endereco(String logradouro, String cidade, String estado){
+        this.logradouro = logradouro;
+        this.cidade = cidade;
+        this.estado = estado;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public void consultaLogradouro(){
+        System.out.printf("Logradouro: %s\n", logradouro );
+    }
+}
+
+//CLASSE PRODUTO
+public class Produto {
+    long codigo;
+    String nome;
+
+    public Produto(){
+    }
+
+    public Produto(long codigo, String nome){
+        this.codigo = codigo;
+        this.nome = nome;
+    }
+
+    public long getCodigo(){
+        return codigo;
+    }
+
+    public void setCodigo(long codigo){
+        this.codigo = codigo;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void consultaProduto(){
+        System.out.printf("Nome do produto: %s\n", nome);
+    }
+}
+
+//CLASSE COMPRA
+public class Compra {
+    Pessoa pessoa;
+    Produto produto;
+
+    public Compra(){
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public void comprar(Pessoa pes, Produto pr){
+        this.pessoa = pes;
+        this.produto = produto;
+        System.out.println("COMPRA EFETUADA! " + pes.getNome() + ", você acaba de pedir o " + produto.getNome());
+    }
+
+    public void verificarCompra(){
+        System.out.println("Olá " + pessoa.getNome() + "! Você selecionou " + produto.getNome() + ".");
+    }
+}
