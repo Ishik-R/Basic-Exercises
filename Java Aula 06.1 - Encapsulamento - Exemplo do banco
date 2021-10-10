@@ -1,0 +1,119 @@
+//AULA 06 - ENCAPSULAMENTO
+//
+//  Introdução ao encapsulamento e boas práticas de utilização dos dados presentes nas classes por meio da declaração de classes "public" e "private".
+//
+//  Para exemplificar os princípios do encapsulamento, a proposta é de criar um algoritmo que receba os dados de um cliente de um banco e realize operações de saque.
+//
+//  *** OBSERVAÇÃO ***
+//
+//  Este programa é um exemplo de práticas NÃO OTIMIZADAS de declaração e utilização de métodos dentro das classes. Há diversos "get"s, "set"s e construtores que não são chamados
+//na Main, então eles poderiam ser deletados de nosso programa sem afetar o funcionamento dele.
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        //Criando um cliente:
+        Pessoa cliente = new Pessoa();
+
+        //Criando uma conta:
+        Conta c1 = new Conta(458912, "Jorge", 45000);
+
+        //Adicionando dados ao cliente:
+        cliente.setNome("Jorge");
+        cliente.setEndereco("Rua General Pastilha Filho");
+        cliente.setCPF("257.892.777-04");
+        cliente.setConta(c1);
+
+        //Realizando um saque:
+        boolean operação = cliente.getConta().sacar(600);
+
+        //Imprimindo valores:
+        System.out.printf("Cliente %s, seu CPF é: %s ", cliente.getNome(), cliente.getCPF());
+
+        if(operação == true){
+            System.out.printf("Cliente %s, seu saldo  é: R$ %.2f ", cliente.getNome(), cliente.getConta().getSaldo());
+        } else{
+            System.out.printf("Cliente %s, você não possui saldo suficiente. Sua operação não foi efetuada.");
+        }
+    }
+}
+
+package com.company;
+
+public class Pessoa {
+    private String nome;
+    private String CPF;
+    private String endereco;
+
+    private Conta conta;
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public Conta getConta() {
+        return conta;
+    }
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
+    //se nossa estrutura faz mais manipulações dos dados além da atribuição podemos criar um nome distinto do "set"
+    public void adicionarConta(Conta conta){
+        this.conta = conta;
+    }
+}
+
+package com.company;
+
+public class Conta {
+    private int numero;
+    private String dono;
+    private double saldo;
+
+    public Conta(int numero, String dono, double saldo) {
+        this.numero = numero;
+        this.dono = dono;
+        this.saldo = saldo;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public void setDono(String dono) {
+        this.dono = dono;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    boolean sacar(double valor){
+        if(valor<=saldo){
+            this.saldo = saldo - valor;
+            System.out.println("Saque de R$ " + valor + " realizado com sucesso!");
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente para o saque!");
+            return false;
+        }
+    }
+}
