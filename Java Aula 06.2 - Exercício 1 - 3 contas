@@ -7,6 +7,7 @@
 //
 //  *** OBSERVAÇÃO ***
 //  - Procurei ter cuidado com o uso do "public" e do "private", mas provavelmente deixei mais coisas no public do que realmente seria necessário.
+//  - Eu poderia também ter criado um construtor para atribuir os valores das pessoas, economizando algumas linhas na Main.
 
 package com.company;
 
