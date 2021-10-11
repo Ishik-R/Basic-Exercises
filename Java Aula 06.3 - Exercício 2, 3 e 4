@@ -26,4 +26,145 @@
 //  O nome, n1 e n2 deverão ser informados pelo usuário.
 //  Na Main, imprima o nome do aluno com a média final e uma atribuição informando se o aluno foi "aprovado" ou "reprovado", sendo que a média é 7.0.
 
-  
+package com.company;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        //Inicialização de objetos e do teclado
+        Scanner teclado = new Scanner(System.in);
+        Professor p1 = new Professor("Jorge", "História", "123.456.789-10");
+        Aluno aluno = new Aluno();
+
+        //EXERCÍCIO 2:
+        p1.exibePerfil();
+
+        //EXERCÍCIO 3:
+        System.out.printf("Informe a quantidade de aulas ministradas: ");
+        p1.setSalarioProfessor(teclado.nextInt());
+
+        //EXERCÍCIO 4:
+        String val = "sim";
+        int ordemDaLista = 0;
+        while(val.equals("sim")){
+            System.out.printf("Insira o nome do aluno(a): ");
+            aluno.setNome(teclado.next());
+            System.out.printf("Insira a nota da primeira prova de " + aluno.getNome() + ": ");
+            aluno.setNota1((float)teclado.nextFloat());
+            System.out.printf("Insira a nota da segunda prova de " + aluno.getNome() + ": ");
+            aluno.setNota2((float)teclado.nextFloat());
+
+            System.out.println(aluno.getNome() + ", sua média final é " + aluno.calculaMedia(aluno.getNota1(), aluno.getNota2()));
+            if(aluno.aprovado()){
+                System.out.println(aluno.getNome() + " foi aprovado!");
+            } else{
+                System.out.println(aluno.getNome() + " foi reprovado :c");
+            }
+            
+            System.out.printf("Você deseja inserir a nota de mais um aluno? Digite 'sim' para continuar: ");
+            val = teclado.next();
+        }
+    }
+}
+
+//CLASSE: PROFESSOR
+package com.company;
+
+public class Professor {
+    private String nome;
+    private String curso;
+    private String cpf;
+    private float salario;
+    private String listaAlunos;
+
+    public Professor(String nome, String curso, String cpf) {
+        this.nome = nome;
+        this.curso = curso;
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalarioProfessor(int aulas){
+        this.salario = (float) 29.90 * aulas;
+        System.out.printf("%s, seu salário pelas %d aulas é de R$ %.2f.\n\n", getNome(), aulas, getSalario());
+    }
+
+    public void exibePerfil(){
+        System.out.println("Nome: " + getNome() + "\nCurso: " + getCurso() + "\n");
+    }
+}
+
+//CLASSE: ALUNOpackage com.company;
+
+public class Aluno {
+    private String nome;
+    private float nota1;
+    private float nota2;
+
+    public Aluno(){}
+
+    public Aluno(String nome, float nota1, float nota2) {
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getNota1() {
+        return nota1;
+    }
+    public void setNota1(float nota1) {
+        this.nota1 = nota1;
+    }
+
+    public float getNota2() {
+        return nota2;
+    }
+    public void setNota2(float nota2) {
+        this.nota2 = nota2;
+    }
+
+    public float calculaMedia(float n1, float n2){
+        float media = (n1+n2)/2;
+        return media;
+    }
+
+    public boolean aprovado(){
+        if(calculaMedia(getNota1(),getNota2())>=7){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
