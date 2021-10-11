@@ -1,0 +1,29 @@
+//AULA 6 - EXERCÍCIO 2, 3 e 4
+//
+//  *** ENUNCIADO ***
+//  Este exercício na verdade é um conjunto de 3 exercícios passados em aula, todos compondo o mesmo programa:
+//
+//  *** EXERCÍCIO 2 ***
+//  Crie duas classes: uma chamada professor e outra chamada aluno. Cada uma deve conter os seguintes atributos:
+//    - professor: nome, curso, CPF, salário
+//    - aluno: nome, nota1, nota2
+//  Imprima na main o nome do professor e seu curso
+//
+//
+//  *** EXERCÍCIO 3 ***
+//  Na classe professor, construa um método para calcular o salário professor. Para esse cálculo é necessário saber o valor da hora-aula do professor e o número de horas 
+//ministradas.
+//    
+//    salário = horas-aula * valor da hora-aula
+//
+//  O valor da hora-aula está fixado em R$ 29,00. O usuário deve fornecer o número de aulas ministradas.
+//  Dica: utilize um método "setSalarioProfessor". Este método será chamado na Main.
+//  Imprima na Main o salário do professor, lembrando que o atributo salário é private.
+//
+//
+//  *** EXERCÍCIO 4 ***
+//  Agora crie um método calculaMedia na classe aluno.
+//  O nome, n1 e n2 deverão ser informados pelo usuário.
+//  Na Main, imprima o nome do aluno com a média final e uma atribuição informando se o aluno foi "aprovado" ou "reprovado", sendo que a média é 7.0.
+
+  
