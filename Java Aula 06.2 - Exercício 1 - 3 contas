@@ -1,0 +1,166 @@
+//AULA 6 - EXERCÍCIO 1
+//
+//  *ENUNCIADO:
+//  - na Main, crie três objetos pessoa e para cada uma crie uma conta.
+//  - faça operações de sacar e transferir dinheiro entre essas contas.
+//  - no final, mostre as informações de cada cliente e sua respectiva conta.
+//
+//  *** OBSERVAÇÃO ***
+//  - Procurei ter cuidado com o uso do "public" e do "private", mas provavelmente deixei mais coisas no public do que realmente seria necessário.
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        //Criando as três pessoas
+        Pessoa p1 = new Pessoa();
+        Pessoa p2 = new Pessoa();
+        Pessoa p3 = new Pessoa();
+
+        //Criando as três contas
+        Conta c1 = new Conta();
+        Conta c2 = new Conta();
+        Conta c3 = new Conta();
+
+        //Adicionando dados ao cliente:
+        p1.setNome("Mônica");
+        p1.setEndereco("Rua Limoeiro 01");
+        p1.setCPF("257.892.777-04");
+        p1.adicionarConta(c1);
+
+        p2.setNome("Magali");
+        p2.setEndereco("Rua Laranjeira 01");
+        p2.setCPF("529.238.122-07");
+        p2.adicionarConta(c2);
+
+        p3.setNome("Cebolinha");
+        p3.setEndereco("Rua Limoeiro 02");
+        p3.setCPF("172.231.333-96");
+        p3.adicionarConta(c3);
+
+        System.out.printf("\nOperações bancárias:\n");
+        //Mônica realiza um saque no valor de 600 reais:
+        p1.getConta().sacar(600);
+
+        //Cebolinha transfere 300 reais para Magali:
+        p3.getConta().transferir(300, c2);
+
+        //Cebolinha saca 200 reais:
+        p3.getConta().sacar(300);
+
+        //Mônica transfere 500 reais para Magali:
+        p1.getConta().transferir(500, c2);
+
+        //Exibindo os saldos finais de cada conta após as operações:
+        System.out.printf("\nSaldos finais:\n");
+        p1.mostrarConta();
+        p2.mostrarConta();
+        p3.mostrarConta();
+    }
+}
+
+//CLASS PESSOA
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Pessoa {
+    private String nome;
+    private String CPF;
+    private String endereco;
+
+    private Conta conta;
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void adicionarConta(Conta conta){
+        Scanner teclado = new Scanner(System.in);
+        Random gerador = new Random();
+        conta.setNumero(10000 + gerador.nextInt(10000));
+        conta.setDono(getNome());
+        System.out.printf("Olá, " + getNome() + " sua conta é: " + conta.getNumero() + ".\n");
+        System.out.printf("Insira o valor de seu primeiro depósito: R$ ");
+        conta.setSaldo(teclado.nextDouble());
+        System.out.printf("Seu saldo inicial é de R$ %.2f .\n", conta.getSaldo());
+        this.conta = conta;
+    }
+
+    public void mostrarConta(){
+        System.out.printf("%s, seu saldo é: R$ %.2f \n", getNome(), getConta().getSaldo());
+    }
+}
+
+//CLASS: CONTA
+package com.company;
+
+public class Conta {
+    private int numero;
+    private String dono;
+    private double saldo;
+
+    public Conta(){
+    }
+
+    public Conta(int numero, String dono, double saldo) {
+        this.numero = numero;
+        this.dono = dono;
+        this.saldo = saldo;
+    }
+
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+    public int getNumero(){
+        return numero;
+    }
+
+    public void setDono(String dono){
+        this.dono = dono;
+    }
+    private String getDono(){
+        return dono;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public void sacar(double valor){
+        if(valor<=saldo){
+            this.saldo = saldo - valor;
+            System.out.println(getDono() + ", saque de R$ " + valor + " foi realizado com sucesso!");
+        } else {
+            System.out.println(getDono() + ", saldo insuficiente para o saque!");
+        }
+    }
+
+    public void transferir(double valor, Conta receptor){
+        if(valor<=saldo){
+            this.saldo = saldo - valor;
+            receptor.setSaldo(receptor.getSaldo() + valor);
+            System.out.println(getDono() + ", sua transferência de R$ " + valor + " para " + receptor.getDono() + " foi realizada com sucesso!");
+        } else{
+            System.out.println(getDono() + ", saldo insuficiente para a transferência!");
+        }
+    }
+}
