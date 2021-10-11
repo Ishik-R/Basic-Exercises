@@ -1,0 +1,183 @@
+//AULA 6 - EXERCÍCIO 2, 3 e 4
+//
+//  Este é um programa que deveria em teoria carregar um ArrayList da classe Aluno e exibi-los ao final do programa. Este seria um diferencial extra do que havia sido proposto
+//pelo exercício que eu achei que seria útil e simples para desenvolver.
+//
+//  O programa, todavia, apresenta um problema: o ArrayList parece ser carregado indevidamente com os carregamentos da última iteração dos alunos em seu carregamento em todas 
+//as suas posições. Em termos mais práticos, na exibição, só veremos o último carregamento repetido em todas as posições:
+//
+//    - inserindo:
+//      - aluno A, nota p1: 7, nota p2: 8
+//      - aluno B, nota p1: 2, nota p2: 9
+//      - aluno C, nota p1: 0, nota p2: 5
+//
+//    - exibe:
+//      - aluno C, nota p1: 0, nota p2: 5
+//      - aluno C, nota p1: 0, nota p2: 5
+//      - aluno C, nota p1: 0, nota p2: 5
+//
+//  Apesar de verificar o código diversas vezes não achei o ponto em que pareço carregar algo de modo errado. Talvez existam particularidades para a manipulação de objetos
+//dentro de Arrays que eu desconheço. O Array inicialmente era uma Queue, mas apresentava o mesmo problema. Eu optei pelo Array em seguida por ser uma coleção de sintaxe mais
+//familiar para mim neste momento.
+//
+//  Para não descartar o código, ainda que ele não execute o que se propõe, deixo-o aqui como registro e com a futura possibilidade de encontrar uma devida solução.
+
+
+package com.company;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        //Inicialização de objetos e do teclado
+        Scanner teclado = new Scanner(System.in);
+        Professor p1 = new Professor("Jorge", "História", "123.456.789-10");
+        Aluno aluno = new Aluno();
+        List<Aluno> turma = new ArrayList<>();
+
+        //EXERCÍCIO 2:
+        p1.exibePerfil();
+
+        //EXERCÍCIO 3:
+        System.out.printf("Informe a quantidade de aulas ministradas: ");
+        p1.setSalarioProfessor(teclado.nextInt());
+
+        //EXERCÍCIO 4:
+        String val = "sim";
+        int ordemDaLista = 0;
+        while(val.equals("sim")){
+            System.out.printf("Insira o nome do aluno(a): ");
+            aluno.setNome(teclado.next());
+            System.out.printf("Insira a nota da primeira prova de " + aluno.getNome() + ": ");
+            aluno.setNota1((float)teclado.nextFloat());
+            System.out.printf("Insira a nota da segunda prova de " + aluno.getNome() + ": ");
+            aluno.setNota2((float)teclado.nextFloat());
+
+            turma.add(ordemDaLista, aluno);
+            ordemDaLista++;
+
+            System.out.println(aluno.getNome() + ", sua média final é " + aluno.calculaMedia(aluno.getNota1(), aluno.getNota2()));
+            if(aluno.aprovado()){
+                System.out.println(aluno.getNome() + " foi aprovado!");
+            } else{
+                System.out.println(aluno.getNome() + " foi reprovado :c");
+            }
+
+            System.out.printf("Você deseja inserir a nota de mais um aluno? Digite 'sim' para continuar: ");
+            val = teclado.next();
+        }
+
+        //MÉTODO DE TESTE: acusando que todos os elementos da lista acabam recebendo o último
+        //System.out.println("********TESTE " + turma.get(0).getNota1());
+
+        System.out.println("\nVocê deseja exibir uma lista dos dados dos alunos para finalizar o programa? Digite 'sim para esta ação:");
+        val = teclado.next();
+        if(val.equals("sim")){
+            for (int i = 0; i< turma.size(); i++){
+                System.out.println("Nome: " + turma.get(i).getNome() + " P1: " + turma.get(i).getNota1() + " P2: " + turma.get(i).getNota2());
+            }
+        }
+    }
+}
+
+//CLASSE: PROFESSOR
+package com.company;
+
+public class Professor {
+    private String nome;
+    private String curso;
+    private String cpf;
+    private float salario;
+    private String listaAlunos;
+
+    public Professor(String nome, String curso, String cpf) {
+        this.nome = nome;
+        this.curso = curso;
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalarioProfessor(int aulas){
+        this.salario = (float) 29.90 * aulas;
+        System.out.printf("%s, seu salário pelas %d aulas é de R$ %.2f.\n\n", getNome(), aulas, getSalario());
+    }
+
+    public void exibePerfil(){
+        System.out.println("Nome: " + getNome() + "\nCurso: " + getCurso() + "\n");
+    }
+}
+
+//CLASSE: ALUNO
+package com.company;
+
+public class Aluno {
+    private String nome;
+    private float nota1;
+    private float nota2;
+
+    public Aluno(){}
+
+    public Aluno(String nome, float nota1, float nota2) {
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getNota1() {
+        return nota1;
+    }
+    public void setNota1(float nota1) {
+        this.nota1 = nota1;
+    }
+
+    public float getNota2() {
+        return nota2;
+    }
+    public void setNota2(float nota2) {
+        this.nota2 = nota2;
+    }
+
+    public float calculaMedia(float n1, float n2){
+        float media = (n1+n2)/2;
+        return media;
+    }
+
+    public boolean aprovado(){
+        if(calculaMedia(getNota1(),getNota2())>=7){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
