@@ -1,0 +1,57 @@
+//AULA 07 - STATIC
+//
+//  O atributo static pode ser atribuído a qualquer parâmetro dentro de uma classe que pode ser acessado por todas as classes. Este recurso pode ser muito útil caso algum 
+//parâmetro seja acessado e modificado diversas vezes por diferentes objetos. Como exemplo, vamos criar uma classe "conta" em um banco. Ela conterá todas as características
+//relevantes para nós sobre a conta (número, dono, data de abertura e saldo) e também uma variável static guardando o número total de contas criadas neste banco. Toda vez que
+//uma nova conta for criada (utilizando uma coleção específica para esta finalidade), iremos registrar essa adição de uma nova conta em nosso contador.
+//
+//  Repare que mesmo quando procuramos reconhecer a quantidade total de contas, seja por c001 ou por c002, eles retornam o mesmo número. A variável static é compartilhada por
+//ambas as contas.
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa p1 = new Pessoa("Bot001", "123456","Rua Genérica");
+
+        Conta c001 = new Conta(12345, p1,"01/01/01", 1000);
+        Conta c002 = new Conta(23456, p1,"01/01/01", 2500);
+
+        p1.setConta(c001);
+
+        System.out.println("Total de contas (reconhecimento por c001): " + c001.getTotalDeContas());
+        System.out.println("Total de contas (reconhecimento por c002): " + c002.getTotalDeContas());
+    }
+}
+
+//CLASSE: CONTA
+public class Conta {
+    private int numero;
+    private Pessoa dono = null;
+    private String dataDeAbertura;
+    private double saldo;
+    private static int totalDeContas = 0;
+
+    public Conta(int numero, Pessoa dono, String dataDeAbertura, double saldo) {
+        this.numero = numero;
+        this.dono = dono;
+        this.dataDeAbertura = dataDeAbertura;
+        this.saldo = saldo;
+        this.totalDeContas = Conta.totalDeContas + 1;
+    }
+    
+    public int getNumero() { return numero; }
+    public void setNumero(int numero) { this.numero = numero; }
+
+    public Pessoa getDono() { return dono; }
+    public void setDono(Pessoa dono) { this.dono = dono; }
+
+    public String getDataDeAbertura() { return dataDeAbertura; }
+    public void setDataDeAbertura(String dataDeAbertura) { this.dataDeAbertura = dataDeAbertura; }
+
+    public double getSaldo() { return saldo; }
+    public void setSaldo(double saldo) { this.saldo = saldo; }
+
+    public int getTotalDeContas() { return Conta.totalDeContas; }
+    
+}
