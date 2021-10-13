@@ -1,0 +1,134 @@
+//AULA 07 - PRIVATE e SUPERCLASSE / SUBCLASSE
+//
+//  Private é mais um modo de declarar os seus objetos dentro das classes, garantindo que somente a própria classe ou que as subclasses dela tenham acesso a ela.
+//
+//  O conceito de superclasse e subclasse pode ser observado nas classes de Gerente e de Atendente. Ambas são classes que aproveitam recursos da classe Funcionario (nome,
+//função, salário e senha), porém possuem dados extras (Gerente recebe também "seção" e Atendente recebe "meta mensal"), então, para evitar a repetição de termos, quando
+//declaramos as classes de Gerente e de Atendente indicamos por meio do termo "extends" que ambas terão acesso a todos os recursos da classe Funcionario.
+//
+//    public class Gerente extends Funcionario{...}
+//
+//    public class Atendente extends Funcionario{...}
+//
+//  Gerente e atendente são, portanto, subclasses de Funcionario.
+//
+//  É possível ainda que as subclasses resgatem funções das superclasses, e vice-versa. Basta utilizar dos termos "super" e "sub". Observe o seguinte trecho, extraído da Classe
+//Gerente:
+//
+//    public void exibir() {
+//      super.exibir();
+//      System.out.println("Seção: " + this.secao);
+//  }
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //criando um novo funcionário
+        Funcionario fRenato = new Funcionario();
+        fRenato.setNome("Renato");
+        fRenato.setFuncao("contabilidade");
+        fRenato.setSalario(5000);
+        fRenato.setSenha(12345);
+
+        //criando um novo gerente
+        Gerente gMarcela = new Gerente();
+        gMarcela.setNome("Marcela");
+        gMarcela.setFuncao("gerente");
+        gMarcela.setSalario(8000);
+        gMarcela.setSenha(54321);
+        gMarcela.setSecao("Relações Públicas");
+
+        //criando um novo atendente
+        Atendente aCristina = new Atendente();
+        aCristina.setNome("Cristina");
+        aCristina.setFuncao("atendente");
+        aCristina.setSalario(4000);
+        aCristina.setSenha(98760);
+        aCristina.setMetaMensal(1000);
+
+        //verificando as senhas para a exibição dos dados
+        Scanner teclado = new Scanner(System.in);
+        System.out.printf("\n" + fRenato.getNome() + ", insira sua senha para verificar seus dados: ");
+        if(fRenato.autenticar(teclado.nextInt())){
+            fRenato.exibir();
+        }
+
+        System.out.printf("\n" + gMarcela.getNome() + ", insira sua senha para verificar seus dados: ");
+        if(gMarcela.autenticar(teclado.nextInt())){
+            gMarcela.exibir();
+        }
+
+        System.out.printf("\n" + aCristina.getNome() + ", insira sua senha para verificar seus dados: ");
+        if(aCristina.autenticar(teclado.nextInt())){
+            aCristina.exibir();
+        }
+    }
+}
+
+//CLASSE: FUNCIONÁRIO
+public class Funcionario {
+    protected String nome;
+    protected String funcao;
+    protected double salario;
+    protected int senha;
+
+    public String getNome() {return nome;}
+    public void setNome(String nome) {this.nome = nome;}
+
+    public String getFuncao() {return funcao;}
+    public void setFuncao(String funcao) {this.funcao = funcao;}
+
+    public double getSalario() {return salario;}
+    public void setSalario(double salario) {this.salario = salario;}
+
+    public int getSenha() {return senha;}
+    public void setSenha(int senha) {this.senha = senha;}
+
+    public void exibir(){
+        System.out.println("*** INFORMAÇÕES DO USUÁRIO ***");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Função: " + this.funcao);
+        System.out.println("Salário: R$ " + this.salario);
+    }
+
+    public boolean autenticar(int senha){
+        if(this.senha == senha){
+            System.out.println("Acesso permitido.");
+            return true;
+        } else{
+            System.out.println("Acesso negado.");
+            return false;
+        }
+    }
+}
+
+//CLASSE: GERENTE
+public class Gerente extends Funcionario{
+    private String secao;
+
+    public String getSecao() {return secao;}
+    public void setSecao(String secao) {this.secao = secao;}
+
+    public void exibir() {
+        super.exibir();
+        System.out.println("Seção: " + this.secao);
+    }
+}
+
+//CLASSE: ATENDENTE
+package com.company;
+
+public class Atendente extends Funcionario{
+    private int metaMensal;
+
+    public int getMetaMensal() {return metaMensal;}
+    public void setMetaMensal(int metaMensal) {this.metaMensal = metaMensal;}
+
+    public void exibir() {
+        super.exibir();
+        System.out.println("Meta mensal de unidades vendidas: " + this.metaMensal);
+    }
+}
