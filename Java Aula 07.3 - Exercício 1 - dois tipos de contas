@@ -1,0 +1,161 @@
+//AULA 7 - EXERCÍCIO 1 - CONTA POUPANÇA E CONTA CORRENTE
+//
+//  Este exercício é similar ao exercício 1 realizado na aula 6 ("Java Aula 06.2 - Exercício 1 - 3 contas"), só que agora o banc possui dois tipos distintos de conta: 
+//
+//    - conta poupança: só é possível movimentar o dinheiro com saldo na conta
+//    - conta corrente: o banco disponibiliza um limite de R$100 que seja utilizado quando o saldo da conta acabar.
+//
+//  Algumas operações devem ser realizadas e deve existir um método para mostrar todas as informações de cada conta ao final.
+//
+//  *OBSERVAÇÕES
+//    - não há um método para depósito direto em uma das contas, apesar de que seria muito simples implementá-lo.
+//    - é possível (mas improvável) que as contas tenham o mesmo código, já que os números delas são gerados randomicamente. Para garantir que as contas não tenham o mesmo número
+//bastaria verificar se o número gerado randomicamente é diferente de todos os outros códigos gerados anteriormente.
+//    - a sequência de operações bancárias e o saldo inicial foram manipulados propositalmente para garantir que a conta 2 fosse negativada, para verificar se o caso em que seja
+//preciso recorrer ao limite extra da conta corrente funcione adequadamente. Caso o limite não seja utilizado o comportamento da conta corrente é idêntico ao da conta poupança.
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        //Criando dois clientes. Cada um criará uma conta para si
+        Pessoa p1 = new Pessoa();
+        Pessoa p2 = new Pessoa();
+
+        //Criando duas contas. Cada uma receberá um tipo
+        Conta c1 = new Conta();
+        ContaCorrente c2 = new ContaCorrente();
+        c1.setSaldo(2000);
+        c2.setSaldo(200);
+
+        //Adicionando dados aos clientes:
+        p1.setNome("Mônica");
+        p1.adicionarConta(c1);
+
+        p2.setNome("Cebolinha");
+        p2.adicionarConta(c2);
+
+        System.out.printf("Operações bancárias:\n");
+        //Mônica realiza um saque no valor de 600 reais
+        p1.getConta().sacar(600);
+
+        //Mônica transfere 100 reais para Cebolinha
+        p1.getConta().transferir(100, c2);
+
+        //Cebolinha saca 350 reais de sua conta
+        p2.getConta().sacar(350);
+
+        //Exibindo os saldos finais de cada conta após as operações:
+        System.out.printf("\nDados das contas:\n");
+        c1.mostrarConta();
+        c2.mostrarConta();
+    }
+}
+
+//CLASSE: PESSOA
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Pessoa {
+    private String nome;
+    private Conta conta;
+
+    public String getNome() {return nome;}
+    public void setNome(String nome) {this.nome = nome;}
+
+    public Conta getConta() {return conta;}
+
+    public void adicionarConta(Conta conta){
+        Scanner teclado = new Scanner(System.in);
+        Random gerador = new Random();
+        conta.setNumero(10000 + gerador.nextInt(10000));
+        conta.setDono(getNome());
+
+        System.out.printf("Olá, " + getNome() + " sua conta é: " + conta.getNumero() + ".\n");
+        System.out.printf("Seu saldo inicial é de R$ %.2f.\n\n", conta.getSaldo());
+        this.conta = conta;
+    }
+}
+
+//CLASSE: CONTA
+package com.company;
+
+public class Conta {
+    private int numero;
+    private String dono;
+    private double saldo;
+
+    public Conta(){
+    }
+
+    public Conta(int numero, String dono, double saldo) {
+        this.numero = numero;
+        this.dono = dono;
+        this.saldo = saldo;
+    }
+
+    public void setNumero(int numero){this.numero = numero;}
+    public int getNumero(){return numero;}
+
+    public void setDono(String dono){this.dono = dono;}
+    public String getDono(){return dono;}
+
+    public void setSaldo(double saldo){this.saldo = saldo;}
+    public double getSaldo(){return saldo;}
+
+    public void sacar(double valor){
+        if(valor<=saldo){
+            this.saldo = saldo - valor;
+            System.out.println(getDono() + ", saque de R$" + valor + " foi realizado com sucesso!");
+        } else {
+            System.out.println(getDono() + ", saldo insuficiente para o saque!");
+        }
+    }
+
+    public void transferir(double valor, Conta receptor){
+        if(valor<=saldo){
+            this.saldo = saldo - valor;
+            receptor.setSaldo(receptor.getSaldo() + valor);
+            System.out.println(getDono() + ", sua transferência de R$" + valor + " para " + receptor.getDono() + " foi realizada com sucesso!");
+        } else{
+            System.out.println(getDono() + ", saldo insuficiente para a transferência!");
+        }
+    }
+
+    public void mostrarConta(){
+        System.out.printf("\n*** CONTA %d ***\nDono: %s\nSaldo: R$%.2f\n", getNumero(), getDono(), getSaldo());
+    }
+}
+
+/CLASSE: CONTA CORRENTE
+package com.company;
+
+public class ContaCorrente extends Conta{
+    private double limite = 100;
+
+    public void sacar(double valor) {
+        if(valor <= super.getSaldo() + limite){
+            super.setSaldo(super.getSaldo() - valor);
+            System.out.println(super.getDono() + ", saque de R$" + valor + " foi realizado com sucesso!");
+        } else {
+            System.out.println(super.getDono() + ", saldo insuficiente para o saque!");
+        }
+    }
+
+    public void transferir(double valor, Conta receptor){
+        if(valor <= super.getSaldo() + limite){
+            super.setSaldo(super.getSaldo() - valor);
+            receptor.setSaldo(receptor.getSaldo() + valor);
+            System.out.println(getDono() + ", sua transferência de R$" + valor + " para " + receptor.getDono() + " foi realizada com sucesso!");
+        } else{
+            System.out.println(getDono() + ", saldo insuficiente para a transferência!");
+        }
+    }
+
+    public void mostrarConta(){
+        super.mostrarConta();
+        System.out.printf("Esta é uma conta corrente, com um limite de R$%.2f.\n", limite);
+    }
+}
