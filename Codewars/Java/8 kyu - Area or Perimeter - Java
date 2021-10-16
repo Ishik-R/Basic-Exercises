@@ -1,0 +1,15 @@
+//8 kyu - Area or Perimeter
+//Java
+//https://www.codewars.com/kata/5ab6538b379d20ad880000ab/java
+//
+//You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+//If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+public class Solution {
+    public static int areaOrPerimeter (int l, int w) {
+        if(l == w)
+          return l*w;
+        else
+          return (2*l + 2*w);
+    }
+}
