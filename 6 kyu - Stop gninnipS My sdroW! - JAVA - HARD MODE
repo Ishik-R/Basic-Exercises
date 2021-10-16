@@ -1,0 +1,74 @@
+//6 kyu - Stop gninnipS My sdroW!
+//https://www.codewars.com/kata/5264d2b162488dc400000001/java
+//
+//  Escreva uma função que receba uma sequência de uma ou mais palavras e retorne a mesma sequência, mas com todas as palavras de cinco ou mais letras invertidas (como o nome
+//deste kata).
+//
+//    - As strings passadas consistirão apenas em letras e espaços.
+//    - Os espaços serão incluídos apenas quando mais de uma palavra estiver presente.
+//
+//  *** HARD MODE: ONDE ESTÁ MEU ARRAY? E O SPLIT? ***
+//  Tanto a utilização do Array quanto do Split facilitam muito o nosso problema. É possível criar um array separando as palavras em Strings únicas por meio do comando split,
+//porém, tive como um desafio particular resolver este problema sem o uso desses recursos. Tive alguns problemas inicialmente, mas eventualmente o problema foi resolvido.
+//
+//  Eu criei um novo arquivo para desenvolver meu algoritmo, por isso o formato dele não está exatamente idêntico ao que eu fiz o upload no codewars, mas se você retirar o 
+//início e lembrar de adicionar o comando "return" a solução será aceita pelo codewars.
+
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String sentence = "PALAVRAS LONGAS SERAO INVERTIDAS mas as CURTAS nao";
+
+        String finalString = "";
+        String word = "";
+        String auxReverseWord = "";
+        int verTamanho = 0;
+
+        for(int i1 = 0; i1 <= sentence.length()-1; i1++) {
+            System.out.println("Loop " + i1);
+
+            verTamanho++;
+            word += sentence.charAt(i1);
+            System.out.println("Palavra armazenada no word: " + word + "\nVer tamanho do word: " + verTamanho);
+
+            //VERFICAÇÃO FINAL DO LOOP *funcionando adequadamente para 1 palavra
+            if (sentence.length()-1 == i1) {
+                System.out.println("LOOP FINAL");
+                word = word.replaceAll(" ","");
+                if (verTamanho >= 5){
+                    for (int i2 = 0; i2 < verTamanho; i2++) {
+                        auxReverseWord = auxReverseWord + word.charAt(verTamanho - 1 - i2);
+                    }
+                    word = auxReverseWord;
+                }
+                finalString = finalString + word;
+            }
+
+            //VERIFICAÇÃO DE CARACTERE EM BRANCO
+            if (Character.isWhitespace(sentence.charAt(i1))){
+                System.out.println("ESPAÇO PORRA");
+                verTamanho--;
+
+                word = word.replaceAll(" ","");
+                if (verTamanho >= 5) {
+                    for (int i2 = 0; i2 < verTamanho; i2++) {
+                        auxReverseWord = auxReverseWord + word.charAt(verTamanho - 1 - i2);
+                    }
+                    word = auxReverseWord;
+                    auxReverseWord = "";
+                }
+                finalString = finalString + word;
+                finalString = finalString + " ";
+                verTamanho = 0;
+                word = "";
+            }
+
+            System.out.println("Saída do loop " + i1 + ": " + finalString + "\n");
+        }
+
+        System.out.println("FINAL: " + finalString);
+
+    }
+}
