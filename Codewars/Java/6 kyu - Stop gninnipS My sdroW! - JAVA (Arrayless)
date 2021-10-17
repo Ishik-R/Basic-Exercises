@@ -7,7 +7,7 @@
 //    - As strings passadas consistirão apenas em letras e espaços.
 //    - Os espaços serão incluídos apenas quando mais de uma palavra estiver presente.
 //
-//  *** HARD MODE: ONDE ESTÁ MEU ARRAY? E O SPLIT? ***
+//  *** ONDE ESTÁ MEU ARRAY? E O SPLIT? ***
 //  Tanto a utilização do Array quanto do Split facilitam muito o nosso problema. É possível criar um array separando as palavras em Strings únicas por meio do comando split,
 //porém, tive como um desafio particular resolver este problema sem o uso desses recursos. Tive alguns problemas inicialmente, mas eventualmente o problema foi resolvido.
 //
