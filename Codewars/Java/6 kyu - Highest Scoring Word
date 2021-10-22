@@ -1,0 +1,111 @@
+//6 kyu - Highest Scoring Word
+//Java
+//https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/java
+
+public class Main {
+
+    public static void main(String[] args) {
+
+		String s = "b aa";
+		String highest = "";
+		int highScore = 0;
+
+		for(String word : s.split(" ")){
+
+			int newScore = 0;
+			for(int counting = 0; counting < word.length(); counting++){
+				switch (word.charAt(counting)){
+					case 'a':
+						newScore += 1;
+						break;
+					case 'b':
+						newScore += 2;
+						break;
+					case 'c':
+						newScore += 3;
+						break;
+					case 'd':
+						newScore += 4;
+						break;
+					case 'e':
+						newScore += 5;
+						break;
+					case 'f':
+						newScore += 6;
+						break;
+					case 'g':
+						newScore += 7;
+						break;
+					case 'h':
+						newScore += 8;
+						break;
+					case 'i':
+						newScore += 9;
+						break;
+					case 'j':
+						newScore += 10;
+						break;
+					case 'k':
+						newScore += 11;
+						break;
+					case 'l':
+						newScore += 12;
+						break;
+					case 'm':
+						newScore += 13;
+						break;
+					case 'n':
+						newScore += 14;
+						break;
+					case 'o':
+						newScore += 15;
+						break;
+					case 'p':
+						newScore += 16;
+						break;
+					case 'q':
+						newScore += 17;
+						break;
+					case 'r':
+						newScore += 18;
+						break;
+					case 's':
+						newScore += 19;
+						break;
+					case 't':
+						newScore += 20;
+						break;
+					case 'u':
+						newScore += 21;
+						break;
+					case 'v':
+						newScore += 22;
+						break;
+					case 'w':
+						newScore += 23;
+						break;
+					case 'x':
+						newScore += 24;
+						break;
+					case 'y':
+						newScore += 25;
+						break;
+					case 'z':
+						newScore += 26;
+						break;
+					default:
+						System.out.println("SOMETHING IS NOT RIGHT");
+				}
+			}
+
+			if(newScore > highScore){
+				highest = word;
+				highScore = newScore;
+			}
+
+		}
+
+		System.out.println("MAIOR PONTUAÇÃO: " + highest);
+
+    }
+}
