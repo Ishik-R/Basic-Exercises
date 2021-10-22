@@ -48,7 +48,7 @@ public class Main {
 
             //VERIFICAÇÃO DE CARACTERE EM BRANCO
             if (Character.isWhitespace(sentence.charAt(i1))){
-                System.out.println("ESPAÇO PORRA");
+                System.out.println("ESPAÇO");
                 verTamanho--;
 
                 word = word.replaceAll(" ","");
