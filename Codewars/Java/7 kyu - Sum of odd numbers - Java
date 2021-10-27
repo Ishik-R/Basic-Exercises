@@ -1,0 +1,26 @@
+//7 kyu - Sum of odd numbers
+//Java
+//https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/java
+
+class RowSumOddNumbers {
+    public static int rowSumOddNumbers(int n) {
+        int result;
+        int skipped;
+
+        result = 0;
+        skipped = 0;
+
+        for(int p = 1; p <= n; p++){
+            if (p == n){
+                skipped = skipped * 2 + 1;
+                for(int c = 1; c <= n; c++) {
+                    result = result + skipped;
+                    skipped = skipped + 2;
+                }
+            }
+            skipped = skipped + p;
+        }
+      
+        return result;
+    }
+}
