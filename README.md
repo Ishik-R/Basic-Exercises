@@ -9,3 +9,6 @@ This repository is supposed to host the exercises i've completed in my initial p
 
 30/09/2021 - RETURNING
  I've left my programming routine aside in the last 3 months. It was a rough period of moving to a totally new city, and at this very moment I'm writing my final paper. Incentivied by my girlfriend and in doubt about working in the education field I'm returning to study programmation.
+ 
+ 16/11/2021 - RETURNING
+  After some weeks working on my final paper, a proposal of a new job and many other things, I'm returning to post more frequently in my GitHub. I'm still studying, taking some free courses at Digital Innovation One (DIO) and Allura. Some exercises in the near future will come from them.
