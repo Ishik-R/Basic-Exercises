@@ -1,0 +1,39 @@
+/*
+6 kyu - Counting Duplicates
+https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/java
+Java
+
+A versão abaixo é o meu algoritmo que roda em uma IDE isoladamente, mas que cumpre os requisitos do problema do Codewars. Como eu estava com problemas para executar o código que
+deveria deletar o termo comparado na posição j (toda vez eu chegava em algum problema na compilação), minha solução foi inserir um caractere que eu sabia que não seria uma
+entrada válida pelo problema (o "?") e considerar que as próximas comparações deveriam desconsiderar a repetição deste determinado termo.
+*/
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+		String text = "abcdDbffffF";
+		int numDuplicate = 0;
+		boolean duplicate = false;
+
+		text = text.toUpperCase();
+
+		for(int i = 0; i <= text.length(); i++){
+			for(int j = i+1; j < text.length(); j++){
+				if(Character.compare(text.charAt(i),text.charAt(j)) == 0 && text.charAt(j) != '?'){
+					duplicate = true;
+					text = text.replace(text.charAt(j),'?');
+				}
+				if(duplicate == true) {
+					numDuplicate++;
+					duplicate = false;
+				}
+			}
+		}
+
+		System.out.println("Número de termos repetidos: " + numDuplicate);
+
+	}
+}
