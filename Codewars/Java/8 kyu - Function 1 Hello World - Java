@@ -1,0 +1,11 @@
+/* 8 kyu Function 1 - hello world - Java
+
+https://www.codewars.com/kata/523b4ff7adca849afe000035
+
+*/
+
+public class HelloWorld {
+ static String greet() {
+    return "hello world!";
+  }
+}
