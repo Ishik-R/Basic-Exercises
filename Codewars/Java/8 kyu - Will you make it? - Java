@@ -1,0 +1,17 @@
+/* 8 kyu - Will you make it?
+   https://www.codewars.com/kata/5861d28f124b35723e00005e/train/java
+   Java
+  
+  A simple mathemathic problem. I'm using simpler exercises to review my knowledge of basic aspects of programming.
+*/
+
+public class Kata {
+  
+  public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+    if(distanceToPump <= (mpg * fuelLeft))
+      return true;  
+    else
+      return false;
+  }
+  
+}
