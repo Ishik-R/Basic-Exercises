@@ -1,0 +1,39 @@
+/*
+Prática 001 - Exercício sobre importação de bibliotecas
+Java
+
+Este é um pequeno exercício proposto pela Aula 4 de Exercícios do Curso de Java do Curso em Vídeo (aka Professor GUanabara)
+Vídeo disponível em: https://www.youtube.com/watch?v=H7Qpt8NRpDw
+
+A proposta deste exercício é de apresentar algumas possbilidades da importação de bibliotecas em Java. Como exemplo, o vídeo apresenta que é possível exibir o horário
+do sistema por meio da biblioteca java.util.Date.
+
+Como exercício, é deixado para nós descobrir como fazer com que seja exibido o idioma de nosso sistema (obtido através de funcões dispobilizadas pela biblioteca 
+java.util.Locale) e o tamanho da tela de nosso sistema (obtido através de funções disponibilizadas pela biblioteca java.awt.*).
+*/
+
+package com.company;
+
+import java.awt.*;
+import java.util.Date;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Date relogio = new Date();
+        System.out.println("Hora do sistema: " + relogio.toString());
+
+        Locale local = Locale.getDefault();
+        String lingua = local.getDisplayLanguage();
+        String pais = local.getDisplayCountry();
+
+        System.out.println("Idioma do sistema: " + lingua);
+        System.out.println("País: " + pais);
+
+        Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
+        System.out.println("Largura da tela (em pixels): " + tamanhoDaTela.getWidth());
+        System.out.println("Altura da tela (em pixels): " + tamanhoDaTela.getHeight());
+
+    }
+}
