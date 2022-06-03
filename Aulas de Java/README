@@ -1,1 +1,33 @@
-Os arquivos referentes a "Aula de Java" serão movidos para esta pasta!
+O QUE É ESTA PASTA?
+Este é o registro de meu primeiro contato com o Java, que ocorreu por meio do acompanhamento em paralelo das aulas de Java que minha namorada teve acesso. Devo dizer que 
+este não é meu primeiro contato de fato com a programação (já que tive experiências anteriores com PASCAL e Python de maneira informal durante meu Ensino Médio e de 
+maneira formal na universidade com Fortran 90/95, MatLab e C++). Aqui, contudo, está disposto meu primeiro registro organizado de uma experiência com programação no 
+GitHub.
+
+Como a próxima etapa do curso já estaria envolvida com a manipulação de um banco de dados, mas ela foi desenvolvida em outra plataforma, então não tive acesso a estes 
+materiais (já que acompanhei o curso de modo paralelo). Nas aulas seguintes foi realizada a integração desta plataforma com os códigos em Java. Como o conteúdo tornou-se
+defasado acabei deixando de lado as aulas seguintes.
+
+
+SOBRE A ORGANIZAÇÃO DESTA PASTA:
+Originalmente este repositório (Basic-exercises) continha somente alguns exercícios provenientes do CodeWars. Aos poucos vieram outros pequenos exercícios e logo tudo 
+passou a ficar amontoado em um único local de modo confuso. E agora que estou retomando meus estudos em programação, este repositório está passando por uma pequena 
+reorganização.
+
+Todos os arquivos que estavam originalmente neste repositório foram movidos para locais categorizados. Tudo que foi produzido durante a experiência com as aulas de Java
+que acompanhei foi disposto nesta "pasta" Aulas de Java (espero que eu possa chamar este espaço de "pasta" ou então este texto será incrivelmente confuso até mesmo para 
+mim no futuro, quando eu tiver uma maior ciência do que eu estou fazendo). Muito provavelmente deve existir outro modo mais eficaz e organizado de lidar com esses 
+arquivos. Eu sinto que estou mexendo no GitHub como se estivesse simplesmente mexendo no Google Drive: um local na nuvem em que eu posso somente guardar o que for preciso.
+
+Sinto que não estou fazendo uso do potencial pleno de versionamento do GitHub. Mesmo para mover estes arquivos eu estou manualmente adicionando "Aulas de Java" no nome de
+cada um dos arquivos e inserindo "/" justamente para enviá-los para cá. Isso justamente explica o elevado número de commits na data de hoje (02/06/2022). Trata-se somente
+deste braçal esforço de organização destes arquivos.
+
+Por hora, estou fazendo uso desta ferramenta do melhor modo que eu posso com os conhecimentos que eu possuo. Reconheço também que será importante realizar uma revisão e
+aprofundamento na utilização do GitHub e nas suas funcionalidades de versionamento. 
+
+
+QUAL O CONTEÚDO DELA?
+Como as aulas tinham muito mais a intenção de abranger pessoas sem nenhum conhecimento sobre programação é possível notar que o avanço é bem detalhado sobre os processos
+da lógica de programação e a sintaxe da linguagem: quais são os tipos de variáveis, como utilizar o teclado para a entrada de dados, como funcionam os loops, como fazer 
+um if e princípios gerais da POO (Programação Orientada a Objetos).
