@@ -1,0 +1,26 @@
+Prática 002 - Introdução ao Swing
+Respeitando a boa tradição dos programadores, este é um programa que exibirá um Hello World com a ajuda do Swing.
+
+MATERIAIS DE REFERÊNCIA DESTE PROJETO:
+VÍDEO - IntelliJ IDEA 2021: How to use GUI Designer
+https://www.youtube.com/watch?v=aIdIXsi1qTU
+Este material contém um tutorial de como interagir com o Swing por meio do IntelliJ IDEA (em inglês).
+
+VÍDEO - Curso de Java #05 - Introdução ao Swing e JavaFX
+https://www.youtube.com/watch?v=cYMruFKwqf0
+Este material contém o tutorial de vídeos que eu estou acompanhando, mas o ambiente de desenvolvimento empregado nele é
+o NetBeans.
+
+
+COMENTÁRIOS:
+Existem diferenças entre o IntelliJ IDEA e o NetBeans para o desenvolvimento de Swing. A interface do NetBeans já vem
+pré-configurada,enquanto que no Intellij IDEA foi necessário realizar algumas etapas extras para tornar o botão
+funcional.
+
+Acabei cruzando os conhecimentos destes dois vídeos para produzir este pequeno programa: uma janela com um único botão
+que retorna o famoso "Hello World", conforme proposto pelo vídeo do Curso em Vídeo. O tutorial em inglês acaba indo
+mais adiante nas funções, adicionando múltiplas áreas e uma interface para adicionar texto.
+
+Apesar de ser um programa muito simples e cujas funcionalidades eu ainda não estou ciente, estarei disponibilizando este
+programa como registro do primeiro contato com o Swing. Com as possibilidades de modificar as saídas e configurações de
+botões, sinto que posso explorar novos - e mais concretos - projetos em breve.
