@@ -1,6 +1,16 @@
 Prática 002 - Introdução ao Swing
 Respeitando a boa tradição dos programadores, este é um programa que exibirá um Hello World com a ajuda do Swing.
 
+
+ESTRUTURA DO PROJETO:
+MainFrame.java - arquivo que contém as linhas de código em Java do projeto. Os botões e toda parte de interatividade é
+configurada neste espaço.
+
+MainFrame.form - arquivo que na interface do IntelliJ IDEA apresenta os elementos de modo visual, sendo possível 
+adicionar e remover elementos como texto, caixa para texto e botões aqui. A apresentação deste arquivo se dá, contudo,
+somente com seus elementos na forma de linha de código.
+
+
 MATERIAIS DE REFERÊNCIA DESTE PROJETO:
 VÍDEO - IntelliJ IDEA 2021: How to use GUI Designer
 https://www.youtube.com/watch?v=aIdIXsi1qTU
