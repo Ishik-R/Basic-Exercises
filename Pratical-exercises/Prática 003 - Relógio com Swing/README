@@ -1,26 +1,37 @@
-Prática 002 - Introdução ao Swing
-Respeitando a boa tradição dos programadores, este é um programa que exibirá um Hello World com a ajuda do Swing.
+Prática 003 - Protótipo de Relógio com Swing
+Este exercício aproveita-se de uma pequena funcionalidade do java.util.Date: a de verificar a data e hora do sistema
+para exibir esses dados em uma pequena interface. Para aumentar o grau de personalização do projeto, uma pequena imagem
+de um calendário também foi adicionada.
 
-MATERIAIS DE REFERÊNCIA DESTE PROJETO:
-VÍDEO - IntelliJ IDEA 2021: How to use GUI Designer
-https://www.youtube.com/watch?v=aIdIXsi1qTU
-Este material contém um tutorial de como interagir com o Swing por meio do IntelliJ IDEA (em inglês).
 
-VÍDEO - Curso de Java #05 - Introdução ao Swing e JavaFX
-https://www.youtube.com/watch?v=cYMruFKwqf0
-Este material contém o tutorial de vídeos que eu estou acompanhando, mas o ambiente de desenvolvimento empregado nele é
-o NetBeans.
+ESTRUTURA DO PROJETO:
+TelaRelogio.java - arquivo que contém as linhas de código em Java do projeto, no qual o botão e a exibição do painel é
+configurada.
+
+TelaRelogio.form - arquivo que na interface do Intellij IDEA centraliza os elementos do painel de modo visual.
+
+Imagem - este pacote contém o arquivo ImagemCalendario.PNG, uma pequena imagem de um calendário genérico.
+
+
+MATERIAIS DE REFERÊNCIA DO PROJETO:
+TEXTO - Creating a Java GUI using Swing in IntelliJ IDEA
+https://tutorials.tinyappco.com/Java/SwingGUI
+Pequeno texto contendo instruções específicas para o Swing no Intellij IDEA. Formato adotado para a criação do psvm.
+
+VÍDEO - Creating First Java Swing GUI Application with IntelliJ IDEA IDE
+https://www.youtube.com/watch?v=5vSyylPPEko
+Tutorial em vídeo explicando as configurações iniciais de um projeto com Swing. As configurações descritas neste vídeo
+são diferentes, mas este material serviu como auxílio para a criação dos labels.
+
+VÍDEO - Exercícios de Java #05 - Curso de Java
+https://www.youtube.com/watch?v=UaTZTP50i08
+Este é o vídeo que propõe o exercício concretizado neste projeto.
 
 
 COMENTÁRIOS:
-Existem diferenças entre o IntelliJ IDEA e o NetBeans para o desenvolvimento de Swing. A interface do NetBeans já vem
-pré-configurada,enquanto que no Intellij IDEA foi necessário realizar algumas etapas extras para tornar o botão
-funcional.
+É notável que mesmo em diferentes tutoriais pela internet é possível encontrar diversas maneiras de se trabalhar com o
+Swing. Como os tutoriais não se aprofundam muito nos detalhes sobre a natureza de cada uma das configurações é muito
+fácil se confundir e esquecer de alguns pequenos passos para a configuração adequada do projeto.
 
-Acabei cruzando os conhecimentos destes dois vídeos para produzir este pequeno programa: uma janela com um único botão
-que retorna o famoso "Hello World", conforme proposto pelo vídeo do Curso em Vídeo. O tutorial em inglês acaba indo
-mais adiante nas funções, adicionando múltiplas áreas e uma interface para adicionar texto.
-
-Apesar de ser um programa muito simples e cujas funcionalidades eu ainda não estou ciente, estarei disponibilizando este
-programa como registro do primeiro contato com o Swing. Com as possibilidades de modificar as saídas e configurações de
-botões, sinto que posso explorar novos - e mais concretos - projetos em breve.
+Este projeto, mesmo sendo algo relativamente simples, demandou 1h30 para ser completado. Creio que com mais prática
+obterei mais agilidade. Sigo com estas dificuldades, mas ainda entregando algumas linhas de código para meu GitHub.
