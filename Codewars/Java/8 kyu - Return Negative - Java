@@ -1,0 +1,15 @@
+/*8 kyu - Return Negative 
+ *https://www.codewars.com/kata/55685cd7ad70877c23000102/train/java
+ *Java
+ * 
+ *In this simple assignment you are given a number and have to make it negative. Negative numbers require no modifications.
+ */
+
+//Codewars answer
+public class Kata {
+  public static int makeNegative(final int x) {
+    
+    return Math.abs(x) * (-1); // Your code here.
+   
+  }
+}
