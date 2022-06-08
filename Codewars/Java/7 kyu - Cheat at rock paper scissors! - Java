@@ -1,0 +1,63 @@
+/* 7 kyu - Cheat at rock paper scissors! 
+ * https://www.codewars.com/kata/57e141ad8a8b8d4d150004f6
+ * Java
+ *
+ * You seem to have the worst luck at rock, paper, scissors! Everyday you play against your friends, but never win. You want a taste of victory!
+ * In this kata you need to define r_p_s_cheat() that takes an argument, either 'rock', 'paper', or 'scissors' and returns your counter to win!
+ * But there's a catch! Your friends know how terrible you are at rock, paper, scissors, and if you win all of the time, then they'll see through your deception!
+ * You need r_p_s_cheat to win 88-92% of the time and lose 8-12% of the time! In other words, you should never tie!
+ *
+ * NA: this challenge is only available in Python at Codewars, but i made a algorithm in Java that is capable of fullfuil its requirements. You can play against the
+ * machine yourself and the machine will have a 90% chance of winning!
+ */
+ 
+ import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Random r = new Random();
+        int intRandom = r.nextInt(11);
+        Scanner teclado = new Scanner(System.in);
+        String validar = "y";
+
+        while(validar.equals("y")){
+            System.out.println("JA-KEN-PO: (choose between 'rock', 'paper' or 'scissors')");
+            String choice = teclado.next();
+            intRandom = r.nextInt(10); //Generates a number between 0-9
+            if(intRandom < 9) {  
+                switch (choice) {
+                    case "rock":
+                        System.out.println("paper");
+                        break;
+                    case "paper":
+                        System.out.println("scissors");
+                        break;
+                    case "scissors":
+                        System.out.println("rock");
+                        break;
+                    default:
+                        System.out.println("Entrada inválida!");
+                }
+            }
+            else{
+                switch (choice){
+                    case "rock":
+                        System.out.println("scissors");
+                        break;
+                    case "paper":
+                        System.out.println("rock");
+                        break;
+                    case "scissors":
+                        System.out.println("rock");
+                        break;
+                    default:
+                        System.out.println("Entrada inválida!");
+                }
+            }
+            System.out.println("Try again? (y/n)");
+            validar = teclado.next();
+        }
+    }
+}
