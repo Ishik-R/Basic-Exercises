@@ -1,0 +1,24 @@
+/* 8 kyu - String repeat 
+ * https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/java
+ * Java
+ *
+ * Write a function called repeatStr which repeats the given string string exactly n times.
+ *
+ * NA: This is the version to be compilled in the Intellij IDEA. The Codewars solution is a little bit differente because it requires a method that returns the answer.
+ */
+
+public class Main {
+    public static void main(String[] args) {
+
+        String str = new String("Ohnooooo");
+        String repeatString = new String("");
+        int repeat = 2;
+
+        while(repeat > 0){
+            repeatString += str;
+            repeat--;
+        }
+        System.out.println(repeatString);
+
+    }
+}
