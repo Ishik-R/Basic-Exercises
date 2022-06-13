@@ -1,0 +1,33 @@
+/* 8 kyu - Opposites Attract
+ * https://www.codewars.com/kata/555086d53eac039a2a000083
+ * Java
+ *
+ * This is a very simple problem: return true if the flowers have and odd and an even number (which means they are in love) or return false if both have flowers with odd
+ * or even number of petals.
+ */ 
+ 
+//Codewars solution: 
+public class OppositesAttract {
+
+  public static boolean isLove(final int flower1, final int flower2) {
+    return ((flower1 % 2) != (flower2 % 2)) ? true : false;
+  }
+  
+}
+
+//If you want to see an example running in your JDK:
+public class Main {
+    public static void main(String[] args) {
+        int flower1 = 5;
+        int flower2 = 9;
+
+        //Solution 1: compact if method
+        System.out.println(((flower1 % 2) != (flower2 % 2)) ? "They are in love!" : "They aren't in love");
+
+        //Solution 2: if method
+        if((flower1 % 2) != (flower2 % 2))
+            System.out.println("They are in love!");
+        else
+            System.out.println("They aren't in love");
+    }
+}
