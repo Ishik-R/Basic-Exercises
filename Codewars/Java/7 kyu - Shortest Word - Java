@@ -1,0 +1,26 @@
+/* 7 kyu - Shortest Word
+ * https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/java
+ * Java
+ *
+ * Simple, given a string of words, return the length of the shortest word(s).
+ *
+ * NA: I think that I'm no going to post the Codewars solution in my files from this point foward. The intention of Codewars is to give challenges, so if I keep posting
+ * them I can ruin the experience for the others. I'm supposed to post great projects in my Github, but for the time being, I want to keep posting my daily exercises.
+ * Maybe in the future I can add more variety and stop post every Codewars Kata.
+ */
+
+//My solution:
+public class Main {
+    public static void main(String[] args) {
+        String s = "Let's travel abroad shall we";
+        String[] separatedWords = s.split(" ");
+        String shortestWord = separatedWords[0];
+
+        for(int i = 1; i < separatedWords.length; i++){
+            if (separatedWords[i].length() < shortestWord.length())
+                shortestWord = separatedWords[i];
+        }
+
+        System.out.printf("Shortest word: %s, with length of %d ", shortestWord, shortestWord.length());
+    }
+}
