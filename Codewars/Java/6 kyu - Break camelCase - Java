@@ -1,0 +1,45 @@
+/* 6 kyu - Break camelCase
+ * https://www.codewars.com/kata/5208f99aee097e6552000148/java
+ * Java
+ *
+ * Complete the solution so that the function will break up camel casing, using a space between words. Here are some examples:
+ * "camelCasing"  =>  "camel Casing"
+ * "identifier"   =>  "identifier"
+ */
+
+
+//Codewars solution:
+class Solution {
+  public static String camelCase(String input) {
+    String output = "";
+
+    for(int i=0; i<input.length(); i++){
+      if(Character.isUpperCase(input.charAt(i)))
+        output = output + " " + input.charAt(i);
+      else
+        output = output + input.charAt(i);
+      }
+    
+    return output;
+  }
+}
+
+//My solution in my JDK:
+public class Main {
+    public static void main(String[] args) {
+
+        String input = "camelCase";
+        String output = "";
+        System.out.println(input);
+
+        for(int i=0; i<input.length(); i++){
+            if(Character.isUpperCase(input.charAt(i)))
+                output = output + " " + input.charAt(i);
+            else
+                output = output + input.charAt(i);
+            System.out.println(output); //See the building of the output growing in every iteration!
+        }
+
+        System.out.println(output);
+    }
+}
