@@ -1,0 +1,38 @@
+/* 5 kyu - Valid Parentheses
+ * https://www.codewars.com/kata/52774a314c2333f0a7000688/java
+ * Java
+ *
+ * Write a function that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, 
+ * and false if it's invalid.
+ *
+ * NA: os testes no Codewars consideraram Strings não vazias mas sem nenhum parêntese como sendo válidas. Pessoalmente eu acredito que se não existe nenhum parêntese a
+ * String deveria ser considerada inválida. Meu algoritmo foi trabalhado com essa consideração em mente (o que na verdade tornou o problema um pouco mais complexo do que
+ * ele seria e, consequentemente, influenciou na maneira como eu estruturei meu algoritmo).
+ */
+ 
+//Versão do autor:
+public class Main {
+    public static void main(String[] args) {
+        String parens = "adasdasfa";
+
+        Boolean removedParenthesis = false;
+        StringBuffer removingParens = new StringBuffer(parens);
+
+        for(int i = 0; i < removingParens.length();){
+            if((removingParens.indexOf("(") != -1) && (removingParens.indexOf("(") < removingParens.indexOf(")"))){
+                System.out.println("Eliminando par de parenteses");
+                removingParens.deleteCharAt(removingParens.indexOf(")"));
+                removingParens.deleteCharAt(removingParens.indexOf("("));
+            } else {
+                i++;
+            }
+            System.out.println("Valor de i: " + i);
+            System.out.println("String final do loop: " + removingParens);
+        }
+
+        //Para considerar strings iniciais sem parênteses como inválidas utilize somente "menor" e não "menor igual"
+        boolean retorno = (removingParens.length() <= parens.length() && removingParens.indexOf("(") == -1 && removingParens.indexOf(")") == -1) ? true : false;
+
+        System.out.println(retorno);
+    }
+}
