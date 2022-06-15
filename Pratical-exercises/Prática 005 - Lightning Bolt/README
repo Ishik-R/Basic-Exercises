@@ -1,0 +1,55 @@
+Prática 005 - Lightning Bolt
+Temos aqui um algoritmo essencialmente simples: verificar qual seria o dano causado a um oponente quando conjurarmos um
+determinado número de cópias da carta "Raio", conhecida na versão em inglês por "Lightning Bolt" ou simplesmente "Bolt"
+para os íntimos.
+
+Esta carta é uma dentre várias presentes no jogo "Magic: the Gathering". Os jogadores utilizam cartas para conjurar
+mágicas para derrotar seus oponentes. Existe uma ampla possibilidade de se trabalhar com probabilidades dentro deste
+jogo, então provavelmente estarei contextualizando alguns de meus futuros exercícios utilizando o Magic.
+
+Para os que não estão familiarizados e somente precisam entender o que este programa faz, aqui vai a síntese: o usuário
+deverá informar qual a quantidade de "raios" que ele deseja conjurar sobre o oponente e o programa retornará a
+quantidade de dano prevista sobre o oponente. Como cada raio causa 3 de dano a qualquer alvo, bastará multiplicar este
+resultado por 3.
+
+Estrutura do projeto:
+Pratica005.form - arquivo que centraliza os elementos da GUI em um painel visual
+Pratica005.java - arquivo que contém as linhas de código do projeto
+lightning-bolt.jpg - imagem da carta Lightning Bolt utilizada no programa
+red-mana-symbol.png - imagem do símbolo de mana vermelha presente no jogo "Magic: the Gathering"
+
+Materiais de referência:
+VÍDEO - Exercícios de Java #06 - Curso de Java
+Link: https://www.youtube.com/watch?v=7XPR-v1Fzjw
+Vídeo que apresentou a proposta inicial deste exercício.
+
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link - https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de criação de um projeto Swing no Intelijj IDEA.
+
+Comentários:
+Eu havia comentado na Prática 004 que a intenção era de disponibilizar um arquivo README no formato Markdown, mas
+aparentemente não tive muito sucesso neste momento. As funcionalidades do Markdown não apareceram do modo que eu
+desejava. Por hora, manterei os READMEs em txt.
+
+Ainda sobre as dificuldades sobre o upload, é notável que os arquivos aqui presentes deveriam estar em diferentes
+diretórios: Pratica005.form e Pratica005.java estavam vinculados ao diretório "classes" e as imagens
+(lightning-bolt.jpg e red-mana-symbol.png) estavam vinculados ao diretório "resources". Muito provavelmente, se eu
+tentar baixar estes arquivos e tentar compilar o programa provavelmente haverá erros.
+
+O correto seria realizar o upload para o GitHub utilizando o Git, subindo o projeto inteiro. Muito provavelmente este
+será um tópico de estudo em um futuro próximo.
+
+Outro ponto de dificuldade sobre este projeto foi a necessidade de alterar a escala das imagens utilizadas. Tentei de
+diversos modos encontrar as configurações referentes ao tamanho das imagens no Intelijj IDEA, mas no fim acabei
+alterando o tamanho das imagens pelo Paint (o que explica a terrível resolução delas).
+
+A ideia original deste projeto foi inspirada no exercício descrito no vídeo "Exercícios de Java #06 - Curso de Java".
+Nele é construído um programa para verificar sua idade. Eu optei por trocar o tema do projeto, utilizando o Magic como
+contexto.
+
+Eu considero o Magic como um grande hobby meu, então foi muito divertido tentar integrar algum elemento do jogo para um
+programa funcional. Ainda que eu tenha demorado quase uma semana a mais tentando ajustar as configurações do tamanho das
+imagens no projeto (o que explica nenhum commit durante o último final de semana - 11/06/2022 e 12/06/2022) eu devo
+dizer que me diverti neste projeto e espero poder inserir no futuro elementos de probabilidade que estão envolvidos com
+o Magic.
