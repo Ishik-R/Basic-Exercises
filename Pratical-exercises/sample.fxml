@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Button fx:id="btnMsg" alignment="CENTER" mnemonicParsing="false" onAction="#pressButton" prefHeight="90.0" prefWidth="140.0" text="Clique!" GridPane.rowIndex="1" />
+      <Label fx:id="lblMessage" alignment="CENTER" prefHeight="20.0" prefWidth="140.0" text="Mensagem" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+   </children>
+</GridPane>

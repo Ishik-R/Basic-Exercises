@@ -1,0 +1,46 @@
+Prática 006 - Introdução ao Java FX
+Este programa tem o intuito somente de desenvolver um botão com um evento atrelado a ele. Como é de praxe, o meu
+primeiro exercício é executar um "hello world" nesta interface. Ao clicarmos em um botão essa mensagem deverá surgir.
+
+
+Estrutura do projeto:
+Todos os arquivos aqui são provenientes do pacote ("package") "src", no qual está a fonte da prática.
+
+Main.java - parte do projeto em que se concentra os elementos de declaração do projeto.
+Controller.java - parte do projeto em que se concentra os elementos de interação do projeto.
+sample.fxml - implementação dos elementos presentes nas "scenes" (requer um SceneBuilder para funcionamento adequado).
+README - explicação do projeto e seu funcionamento.
+
+
+Materiais de referência:
+VÍDEO - Curso de Java #05 - Introdução ao Swing e JavaFX
+Link: https://www.youtube.com/watch?v=cYMruFKwqf0
+Vídeo que define a proposta deste projeto. É um tutorial que contém uma breve introdução ao Swing e a comparação entre
+o Swing e o JavaFX. Realizado na IDE do NetBeans.
+
+VÍDEO - How to Create a JavaFX Project in IntelliJ IDEA Using Scene Builder
+Link: https://www.youtube.com/watch?v=T3NlWMzPyXM
+Excelente tutorial sobre a criação de um projeto JavaFX utilizando o Intellij IDEA. Vídeo que definiu as bases da
+criação deste projeto.
+
+VÍDEO - Fix Error: JavaFX runtime components are missing, and are required to run this application
+Link: https://www.youtube.com/watch?v=hS_6ek9rTco
+Este é um curto vídeo contendo explicações mais detalhadas sobre como configurar o JavaFX corretamente. Direto a um
+ponto bem específico, foi fundamental para que esta prática fosse compilada corretamente.
+
+VÍDEO - JavaFX GUI Course ☕【𝙁𝙧𝙚𝙚】
+Link: https://www.youtube.com/watch?v=9XJicRt_FaI
+O tutorial mais completo que pude encontrar sobre introdução ao JavaFX. É o material no qual estou me baseando para dar
+prosseguimento aos estudos de JavaFX. Esta prática abarca práticas abordadas desde o começo deste tutorial até a marca
+dos 50 minutos.
+
+Devo ressaltar que este canal apresenta tutoriais excelentes e muito detalhados. Recomendo!
+
+
+Comentários:
+Apesar do JavaFX ter requisitado um maior esforço para a configuração do ambiente de trabalho, as ferramentas parecem
+ser mais interativas e responsivas em relação ao Swing. A estrutura geral deste projeto já estava pronta desde ontem,
+mas tive um maior cuidado em refinar esta prática e procurar por tutoriais mais detalhados.
+
+Notei que preciso também aprofundar meus conhecimentos para que eu consiga gerar um programa executável adequado. Esta
+meta também está definida para um futuro próximo. Vejamos como serão as próximas semanas.
