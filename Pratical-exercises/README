@@ -1,0 +1,35 @@
+Prática 007 - Funções Math
+Este programa apresenta algumas funcionalidades da biblioteca Math. É possível inserir um valor em uma interface
+construída com Swing e ela retorna o valor absoluto, o resto da divisão por 2, a raiz quadrada e a raiz cúbica.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica007.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica007.form - arquivo que centraliza os elementos da GUI em um painel visual.
+calculadora.png - arquivo que contém a imagem de uma calculadora, utilizada no label "lblCalculatorImage".
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de criação de elementos básicos de um projeto em Swing no Intellij IDEA.
+
+TUTORIAL - Lesson: Learning Swing with the NetBeans IDE
+Link: https://docs.oracle.com/javase/tutorial/uiswing/learn/index.html
+O tutorial seguido pela criadora do vídeo acima; existem mais tutoriais e recursos que podem ser explorados aqui.
+
+VÍDEO - Curso de Java #07 - Operadores Aritméticos e Classe Math
+Link: https://www.youtube.com/watch?v=W9V5wtOOZHs
+Vídeo que apresentou a proposta deste exercício.
+
+
+Comentários:
+Este já foi um projeto que foi executado com maior facilidade. Sinto que estou começando a pegar o jeito do Swing. Este
+conforto irá permitir que eu me aprofunde na utilização do Git para os uploads de futuros projetos e em tentar descobrir
+como manipular o tamanho de exibição das imagens em Swing (sem a necessidade de editá-las).
+
+Para a imagem da calculadora, eu utilizei uma imagem retirada diretamente do Google, cujo link eu não tenho mais. Não
+poderei dar os devidos créditos ao autor, infelizmente. A imagem foi diminuída para um tamanho de 308x308.
