@@ -1,0 +1,32 @@
+Prática 008 - Verificador de idade
+Este programa tem como objetivo fornecer uma intenaface na qual o usuário pode informar sua idade e, como saída, o
+programa irá informar a idade do usuário (com base no ano do sistema) e a situação de obrigatoriedade do voto. No Brasil
+o voto é obrigatório para pessoas entre 18 e 70 anos e facultativo para pessoas entre 16 e 18 anos e pessoas acima de 70
+anos.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+Pratica008.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica008.form - arquivo que centraliza os elementos da GUI em um painel visual.
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de criação de elementos básicos de um projeto em Swing no Intellij IDEA.
+
+TUTORIAL - Lesson: Learning Swing with the NetBeans IDE
+Link: https://docs.oracle.com/javase/tutorial/uiswing/learn/index.html
+O tutorial seguido pela criadora do vídeo acima; existem mais tutoriais e recursos que podem ser explorados aqui.
+
+VÍDEO - Curso de Java #08 - Operadores Lógicos e Relacionais
+Link: https://www.youtube.com/watch?v=xHgnlic7fj8
+Vídeo que contém a proposta inicial deste programa.
+
+
+Comentários:
+Devo dizer que procurei melhorar a apresentação estética do botão e do spinner, mas posso ter acidentalmente ter
+configurado elementos dos tamanhos de maneira errada. Até onde pude notar, a janela não apareceu distorcida. Espero que
+se eu retornar um dia para verificar esta prática ela não apareça distorcida.
