@@ -1,0 +1,51 @@
+Prática 009 - adivinhador
+A proposta deste programa é de que o usuário tente adivinhar um número entre 1 até 5 e verificar se ele acertou ou não.
+Seu oponente é um famoso gênio da internet (os diretos da imagem dele estão reservados para seus respectivos donos, este
+é apenas um simples programa de exercício).A cada nova interação o programa irá selecionar um novo número, então é
+possível jogar quantas vezes você quiser!
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+Pratica009.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica009.form - arquivo que centraliza os elementos da GUI em um painel visual.
+rectangleBubbleBox.jpg - arquivo de imagem do balão de fala do gênio.
+surprisedGenie.png - arquivo de imagem do gênio.
+examplePratica009.png - imagem ilustrativa do programa rodando após ser compilado.
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Java GUI ☕【𝙁𝙧𝙚𝙚】
+Link: https://www.youtube.com/watch?v=Kmgo00avvEw
+Um tutorial bem completo sobre as funcionalidades do Swing em Java.
+
+VÍDEO - Exercícios de Java #08 - Curso de Java
+Link: https://www.youtube.com/watch?v=LNECh9RplE0
+Vídeo que apresentou a proposta deste projeto.
+
+
+Comentários:
+Devo dizer que o Intellij está se provando ser um compilador mais complexo de se trabalhar. O tutorial presente no vídeo
+"Exercícios de Java" trabalha com o NetBeans, e nele é muito mais simples inserir um label sobreposto a outro. Isso faz
+com que colocar texto sobre uma imagem seja muito trivial. Outro ponto que parece ser muito mais simples é o de ajustar
+a proporção dos botões, labels e spinnners.
+
+Por outro lado, isso me faz cogitar uma outra abordagem sobre como configurar meus projetos Swing. Muitos dos ajustes
+até o momento foram feitos diretamente no form, porém, agora que é necessária uma maior atenção ao tamanho de cada
+elemento, talvez seja mais interessante determinar estes elementos na parte reservada para o código em Java. Estarei
+estudando estas configurações com mais detalhes em breve.
+
+Devo dizer que gostaria de ter implementado mais funcionalidades a esta prática: acredito que seja possível alternar as
+imagens do gênio a cada resposta e gostaria de reduzir a largura do spinner para um tamanho menor, mas não consegui por
+hora implementar isso. Ainda tenho um bom caminho a percorrer até atingir um pleno domínio do Swing.
+
+Um ponto que exigiu um maior esforço na elaboração deste projeto foi o balão. Devido justamente as dificuldades de se
+ajustar o tamanho e posição dos labels, optei por centralizar o texto sobre o label (e assim sobrepondo também a imagem
+do balão, dando a impressão visual do texto estar dentro dele) e construir um balão que se ajustasse praticamente ao
+tamanho da figura. Sim, o balão foi feito por mim no Paint. Não é uma solução muito elegante, mas dado o meu domínio do
+Swing neste momento, foi eficiente.
