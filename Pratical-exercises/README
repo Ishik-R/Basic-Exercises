@@ -1,0 +1,38 @@
+Prática 010 - Par ou ímpar?
+Este programa recebe como entrada um número inteiro e retorna para o usuário se ele é par ou ímpar.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica010.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica010.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica010.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Java GUI ☕【𝙁𝙧𝙚𝙚】
+Link: https://www.youtube.com/watch?v=Kmgo00avvEw
+Um tutorial bem completo sobre as funcionalidades do Swing em Java.
+
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - Curso de Java #09 - Estruturas Condicionais (Parte 1)
+Link: https://www.youtube.com/watch?v=wW3eve4vTMc
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Um programa com uma lógica bem simples. Procurei ter mais atenção ao tamanho dos elementos, ainda sem muito sucesso no
+grau de personalização que eu desejava. Porém, no que se refere a funcionalidade, este programa foi concluído sem
+maiores empecilhos. Ainda é preciso desenvolver melhor a apresentação.
+
+Por outro lado, esta é a primeira prática na qual eu disponibilizo um arquivo executável! Pude testá-lo e verificar que
+o projeto está funcionando. Neste sentido estou satisfeito.
