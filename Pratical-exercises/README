@@ -1,0 +1,53 @@
+Prática 011 - Verifica Delta
+Este programa apresenta uma calculadora que verifica o valor de "Delta" de uma equação de segundo grau.
+
+As equações de segundo grau são associadas a uma fórmula que é muito trabalhada com os alunos no Ensino Médio, conhecida
+popularmente por "Bhaskara". Um dos elementos presentes nesta fórmula é justamente o valor de Delta, que pode ser obtido
+ao realizarmos a seguinte conta:
+
+Delta = B^2 - 4 * A * C
+
+No qual A é o valor que acompanha X^2, B é o valor que acompanha X e C é o valor da constante da equação de segundo
+grau.
+
+Por meio do valor de Delta é possível determinar o comportamento geral das raízes desta função: se Delta assumir valores
+negativos a equação não possui raízes reais. Se Delta for igual a zero a equação possui um único valor para a raiz, ou
+dois valores iguais como resposta para a raiz. E se Delta for maior do que zero a equação possui duas raízes reais
+distintas.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica011.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica011.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica011.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Java GUI ☕【𝙁𝙧𝙚𝙚】
+Link: https://www.youtube.com/watch?v=Kmgo00avvEw
+Um tutorial bem completo sobre as funcionalidades do Swing em Java.
+
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - Exercícios de Java #09 - Curso de Java
+Link: https://www.youtube.com/watch?v=mGgd1f66kWE
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Bhaskara é uma palavra muito familiar para os alunos do Ensino Médio, e como licenciado em Física devo dizer que estou
+bem familiarizado com este termo, o que tornou o processo de elaboração do programa mais divertido. Pude direcionar mais
+esforços na apresentação do programa e, apesar de não ter conseguido fazer as coisas exatamente como planejado, a
+apresentação final me deixou satisfeito.
+
+Apesar de ter tentado configurar uma maior parcela do programa no arquivo .java, ainda precisei configurar alguns
+detalhes no .form (especialmente no que se refere ao comportamento geral do tamanho dos labels).
