@@ -1,0 +1,30 @@
+/* 8 kyu - Find the smallest integer in the array
+ * https://www.codewars.com/kata/55a2d7ebe362935a210000b2/train/java
+ * Java
+ *
+ * Given an array of integers your solution should find the smallest integer.
+ * You can assume, for the purpose of this kata, that the supplied array will not be empty.
+ *
+ * NA: por ser um programa simples, eu coloquei a disposição duas soluções: uma envolvendo um método e outra com a execução de um loop.
+ */
+
+//My solution:
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[] array = new int[] { 400, 55, 3, 90, -9 };
+
+        int min1 = Arrays.stream(array).min().getAsInt();
+        System.out.println("Mínimo pela técnica 1: " + min1);
+
+        int min2 = array[0];
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < min2)
+                min2 = array[i];
+        }
+        System.out.println("Mínimo pela técnica 2: " + min2);
+
+    }
+}
