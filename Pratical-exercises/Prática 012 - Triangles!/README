@@ -5,7 +5,8 @@ acordo com o tamanho dos lados), podendo ser isóceles, escaleno ou equilátero.
 
 
 Estrutura do projeto:
-Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "src", no qual está a 
+fonte da prática.
 
 Pratica012.java - parte dos projetos em que se concentra os elementos de código em Java.
 Pratica012.form - arquivo que centraliza os elementos da GUI em um painel visual.
