@@ -1,0 +1,44 @@
+Prática 012 - Triangles!
+Este programa recebe três valores distintos (por meio de sliders) e verifica se é possível montar um triângulo com
+segmentos dos tamanhos selecionados. Se o triângulo for válido, ele ainda retornará o tipo de triângulo formado (de
+acordo com o tamanho dos lados), podendo ser isóceles, escaleno ou equilátero.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica012.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica012.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica012.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+Materiais de referência:
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Exercícios de Java #10 - Curso de Java
+Link: https://www.youtube.com/watch?v=d-2E7c2Kfcc
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Novamente fiz uso de um arquivo .form para a construção deste projeto, e novamente encontrei problemas com as
+configurações no Intelijj. Não consegui configurar adequadamente a quantidade de divisões nos sliders (e por isso eles
+estão indo para valores entre 0 e 100), e conforme o valor deles varia há também uma pequena variação em seus tamanhos.
+
+A interface do arquivo .form parece inclusive entrar em conflito com algumas pequenas configurações que podem ser
+passadas pelo .java. Por exemplo: tive problemas quando tentei definir um tamanho fixo para os sliders.
+
+Eu já estava ciente dessas dificuldades, então inicialmente eu desenvolvi a proposta deste problema sem fazer uso de um
+arquivo .form para criar o meu painel principal. Contudo, logo percebi que instanciar múltiplos JLabels manualmente faz
+com que o programa não se torne responsivo. Notei este problema e vi que outros iniciantes com o Swing na internet
+também encararam esta dificuldade.
+
+Em breve procurarei trabalhar com as práticas de Swing de outra forma, seja fazendo o download de outra IDE (como o
+NetBeans) ou tentando compreender melhor a prática do Swing para evitar a configuração visual do Intellij IDEA. Por hora
+ eu fiz somente o básico requerido pela prática proposta.
