@@ -1,0 +1,35 @@
+Prática 015 - Fatorial
+Este programa recebe um valor por meio do JSpinner e retorna o valor fatorial correspondente a ele.
+
+Lembrando que para calcular o fatorial de um número basta realizar a multiplicação de todos os números naturais até ele
+(com exceção do 0, cujo fatorial é igual a um, ou seja: 0! = 1). Por definição não há números fatoriais negativos.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "src", no qual está a
+fonte da prática.
+
+Pratica015.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica015.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica015.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Exercícios de Java #10 - Curso de Java
+Link: https://www.youtube.com/watch?v=d-2E7c2Kfcc
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Este é mais um exercício simples sobre a utilização de loops. Novamente, devido a minha limitação do domínio do
+Intellij, estou determinando as condições limites do cálculo de fatoriais dentro do ChangeListener do JSpinner: o
+programa não deve calcular fatoriais de números negativos ou ir além do 12! devido as limitações do tipo Integer.
