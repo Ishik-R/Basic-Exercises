@@ -1,0 +1,30 @@
+Prática 014 - Contador
+Um simples programa que recebe um número natural e executa a contagem até ele a partir do 1.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica014.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica014.form - arquivo que centraliza os elementos da GUI em um painel visual.
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Curso de Java #11 - Estruturas de Repetição (Parte 1)
+Link: https://www.youtube.com/watch?v=2fawKjR8d4c
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Este programa tem a finalidade de explica o funcionamento de loops. Trata-se de um programa muito simples e justamente
+por isso eu acabei não gerando um arquivo executável (.jar).
+
+Como não consigo facilmente alterar as propriedades do JSpinner pelo Intellij, a solução acabou sendo verificar as
+condições do tamanho do número a ser contado dentro da lógica do próprio programa, e é justamente por isso que ele está
+limitado entre números de 1 até 26. Abaixo disso o loop já não seria executado e acima desse valor (26) os elementos
+começam a sair da tela.
