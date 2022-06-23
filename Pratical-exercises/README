@@ -1,0 +1,59 @@
+Prática 013 - Verificador de triângulos
+Este programa recebe três valores distintos (por meio de sliders) e verifica se é possível montar um triângulo com
+segmentos dos tamanhos selecionados. Se o triângulo for válido, ele ainda retornará o tipo de triângulo formado (de
+acordo com o tamanho dos lados), podendo ser isóceles, escaleno ou equilátero.
+
+É possível notar que o arquivo está intitulado como "Pratica012". Bem, a Prática 012 apresentou exatamente a mesma
+proposta de exercício. Existem de fato dois programas que realizam a mesma tarefa, mas a diferença entre eles está no
+modo como cada um deles foi construído.
+
+Outra diferença notável entre os projetos é que enquanto que a Prática 012 está disposta toda em inglês, a interface da
+Prática 013 está em português.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "src", no qual está a
+fonte da prática.
+
+Pratica012.java - código-fonte do projeto.
+Pratica012.jar - arquivo executável do projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+PERGUNTA- Buttons not showing up on Jframe
+Link: https://stackoverflow.com/questions/44403605/buttons-not-showing-up-on-jframe
+Inicialmente tive alguns problemas com a inicialização dos elementos no painel principal. Os elementos não apareciam
+quando eu rodava o programa. Pesquisando eu encontrei este mesmo problema e a solução foi relativamente simples: fazer
+com que o painel se tornasse visível após todos os elementos terem sido adicionados.
+
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - Java GUI ☕【𝙁𝙧𝙚𝙚】
+Link: https://www.youtube.com/watch?v=Kmgo00avvEw
+Um tutorial bem completo sobre as funcionalidades do Swing em Java. Utilizei boa parte das tecnicas dele para a criação
+deste programa.
+
+VÍDEO - Exercícios de Java #10 - Curso de Java
+Link: https://www.youtube.com/watch?v=d-2E7c2Kfcc
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Eu já me manifestei pelo desconforto em alguns aspectos ao estruturar um programa por meio da interface do arquivo .form
+no Intellij, então procurei realizar esta prática sem utilizar a interface do GUI form.
+
+Justamente por isso que esta prática veio ser concluída depois da prática com o arquivo .form. A interface GUI agiliza
+muito o processo de criação, sem contar que torna o código muito mais limpo e organizado. Apesar de algumas confusões,
+a prática foi concluída com sucesso.
+
+Devo dizer que a apresentação desta versão da prática está muito mais agradável do que a versão da Prática 012. Os
+elementos estão posicionados exatamente da maneira que eu quero. Por outro lado, o programa poderia ter sido muito
+melhor organizado fazendo uso de outras classes e de uma melhor organização de código. Por exemplo: eu precisei criar um
+método para fazer com que o botão conseguisse cumprir sua função. Não é uma solução muito usual, mas ela funcionou.
+
+Este foi um bom exercício para entender a função do GUI .form e também de testar os meus domínios da configuração de uma
+interface em Swing. Irei seguir com os projetos com o .form (ainda que a apresentação final pelo Intellij não seja a
+mais agradável para mim) mas ciente de que posso refazer o mesmo projeto com uma melhor apresentação visual.
