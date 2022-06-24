@@ -1,0 +1,45 @@
+Prática 016 - Introdução ao JOptionPane
+Este é um programa que recebe do usuário números inteiros até que o usuário repasse o valor 0 (zero). Então, o programa
+retorna a quantidade de números que foram enviados, quantos destes números são pares, quantos são ímpares, quantos são
+maiores que 100 e a média aritmética deles.
+
+Toda a interface é construída por meio do JOptionPane, janelas configuráveis e personalizáveis.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui são provenientes do pacote (package) "src", no qual está a fonte da prática.
+
+Pratica016.java - parte dos projetos em que se concentra os elementos de código em Java.
+README - README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+DÚVIDA - How to print a float with 2 decimal places in Java?
+Link: https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java
+Eu quis carregar o valor já arredondado, sem fazer uso do "printf", então procurei por algum método que permitisse o
+arredondamento de um número float para duas casas decimais.
+
+TEXTO - Blocos Try/Catch
+Link: https://www.devmedia.com.br/blocos-try-catch/7339
+Inicialmente, prevendo inputs que não seriam compatíveis com a variável do tipo "int", eu tentei criar este programa
+fazendo uso dos blocos "try / catch". Acabei deixando a ideia de lado neste momento para priorizar a finalização desta
+prática, mas devo ressaltar que li rapidamente este material. Provavelmente, voltando neste texto com uma leitura mais
+focada seja possível implementar o "try / catch" sem maiores problemas.
+
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://youtu.be/Kmgo00avvEw?t=5892
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA. Nesta parte destacada
+do vídeo temos a explicação sobre o JOptionPane.
+
+VÍDEO - Exercícios de Java #12 - Curso de Java
+Link: https://www.youtube.com/watch?v=sUSnoHiTZ8E
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Devo dizer que fiquei tentado também a formular este programa fazendo uso da funcionalidade do "try / catch". É
+perfeitamente possível que um usuário forneça um número que nã seja inteiro. Neste caso o programa simplesmente indica
+o erro e não compila mais. Acabei tentando implementar com certo sucesso o "catch" para o caso genérico de erro, mas
+precisaria entender um pouco mais da dinâmica deste comando já que eu acabava preso no loop em algumas situações.
+
+Pelo visto já tenho um próximo tópico a ser estudado assim que o módulo básico de Java do Curso em Vídeo terminar.
