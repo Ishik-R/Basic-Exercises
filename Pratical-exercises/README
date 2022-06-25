@@ -1,0 +1,38 @@
+Prática 017 - Incrementador
+Este é um programa que recebe do usuário um valor inicial, um valor final e um valor para determinar qual será o
+incremento a cada iteração. Feitas as seleções, o usuário aperta um botão para executar o programa, que retornará uma
+contagem do modo desejado.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "src", no qual está a
+fonte da prática.
+
+Pratica017.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica017.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica017.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Make a Java Executable File in IntelIJ IDEA IDE
+Link: https://www.youtube.com/watch?v=NZHawGWqaYU
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+VÍDEO - How to Build a Swing GUI with IntelliJ IDEA
+Link: https://www.youtube.com/watch?v=-SmNpKskfJc
+Tutorial de introdução aos elementos básicos da criação de um projeto em Swing no Intellij IDEA.
+
+VÍDEO - Exercícios de Java #13 - Curso de Java
+Link: https://www.youtube.com/watch?v=ZYvGz1h_2MU
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Acabei entendendo melhor o funcionamento do JSlider nesta prática: consegui ajustar os valores iniciais e finais de cada
+slider da maneira desejada. Por outro lado, enquanto no vídeo que apresenta a proposta do problema a barra de rolamento
+lateral aparece sem maiores problemas, eu não consegui fazer com que essa barra de rolamento aparecesse.
+
+Para evitar problemas na exibição, no fim, já que não consegui implementar uma devida barra de rolamento, a solução foi
+deixar a janela do programa um pouco mais alta e ajustar o limite máximo de iterações que este programa realizará. Não é
+uma solução ideal, mas ela funciona.
