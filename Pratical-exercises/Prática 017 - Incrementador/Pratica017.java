@@ -62,7 +62,7 @@ public class Pratica017 extends JFrame {
 
     public static void main(String[] args) {
         JFrame p017frame = new Pratica017("Prática 017 - Incrementador");
-        p017frame.setSize(500, 520);
+        p017frame.setSize(500, 550);
         p017frame.setLocationRelativeTo(null);
         p017frame.setVisible(true);
     }
