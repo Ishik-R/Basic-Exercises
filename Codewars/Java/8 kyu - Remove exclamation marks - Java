@@ -1,0 +1,17 @@
+/* 8 kyu - Remove exclamation marks
+ * https://www.codewars.com/kata/57a0885cbb9944e24c00008e/java
+ * Java
+ * 
+ * Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+ * 
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+//Minha solução:
+public class Main {
+    public static void main(String[] args) {
+
+        String aaa = "aloaefcja adasdasd! sadaosd! !!!!a";
+        System.out.println("Sem exclamação: " + aaa.replaceAll("!", ""));
+    }    
+}
