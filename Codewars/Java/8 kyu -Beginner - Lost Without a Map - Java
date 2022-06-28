@@ -1,0 +1,28 @@
+/* 8 kyu -Beginner - Lost Without a Map 
+ * https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/java
+ * Java
+ *
+ * Given an array of integers, return a new array with each value doubled.
+ *
+ * NA: estou trabalhando em uma prática que está envolvida com Arrays, e já que não conseguirei finalizá-la tão cedo, resolvi pelo menos deixar registrado um exercício
+ * que faz uso de Arrays.
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+//Minha solução:
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6};
+
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = arr[i] * 2;
+        }
+
+        for (int n: arr){
+            System.out.print(n + " ");
+        }
+    }
+}
