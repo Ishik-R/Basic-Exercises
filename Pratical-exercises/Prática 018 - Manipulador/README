@@ -1,0 +1,49 @@
+Prática 018 - Manipulador
+Este programa apresenta uma interface ao usuário, na qual é possível manipular um pequeno vetor (ou array) contendo
+números inteiros. É possível adicionar valores em índices específicos ao vetor, tornar valores em índices específicos
+nulos (ou seja, iguais a zero) e ordenar os valores do vetor em ordem crescente.
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "classes", no qual está a
+fonte da prática.
+
+Pratica018.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica018.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica018.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Create Executable Jar File in NetBeans IDE JAVA
+Link: https://www.youtube.com/watch?v=__f8OEP2ZHo
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+PERGUNTA - netbeans: How to put some title in the title bar
+Link: https://stackoverflow.com/questions/7510009/netbeans-how-to-put-some-title-in-the-title-bar
+Um usuário teve sua questão respondida no StackOverflow. No caso, a dúvida era sobre como inserir um título na janela do
+Swing.
+
+PERGUNTA - How to delete/move this line of code in NetBeans
+Link: https://stackoverflow.com/questions/29640925/how-to-delete-move-this-line-of-code-in-netbeans
+Um usuário teve sua questão respondida no StackOverflow. No caso, a dúvida era referente a uma pequena parte da linha de
+código que não podia ser alterada ou removida. Eu estava tentando remover um ActionListener que havia sido
+acidentalmente duplicado.
+
+VÍDEO - Exercícios de Java #14 - Curso de Java
+Link: https://www.youtube.com/watch?v=6YxJOIxJyKo
+Vídeo que apresenta a proposta desta prática. Como desenvolvi o programa pelo NetBeans, este vídeo também foi o
+principal guia dos passos do projeto.
+
+
+Comentários:
+Resolvi desenvolver esta prática com o NetBeans. Tive dificuldades em integrar o uso da JList com o Array dentro do
+Intellij, então optei por seguir mais fielmente a proposta apresentada.
+
+Devo dizer que tive um controle muito melhor dos elementos visuais neste projeto e o NetBeans já escreve automaticamente
+algumas linhas de código indispensáveis ao projeto, agilizando o processo. Por outro lado, tive alguns contratempos ao
+lidar com algumas linhas de código que não podiam ser removidas e senti que o meu grau de controle sobre alguns pontos
+do projeto foi bem menor.
+
+Dadas as devidas diferenças entre as IDEs, devo dizer que cada uma tem seus próprios pontos positivos e negativos. Eu
+pretendo desenvolver mais uma prática para treinar meu domínio com o NetBeans.
