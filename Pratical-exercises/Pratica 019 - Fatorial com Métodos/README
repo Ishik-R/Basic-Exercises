@@ -1,0 +1,55 @@
+Pratica 019 - Fatorial com Métodos
+Este programa apresenta uma interface na qual um usuário pode inserir um número natural e que o programa poderá calcular
+o valor do respectivo fatorial a apresentar a expressão em uma String. Como este é um exercício para a introdução de
+Métodos em Java, foram criadas rotinas que calculam e devolvem o resultado e a String de apresentação diretamente ao
+programa.
+
+O método "Fatorial" pode inclusive ser reaproveitado em outros programas. Essa é inclusive uma das vantagens de se
+trabalhar com métodos: o reaproveitamento de código!
+
+
+Estrutura do projeto:
+Todos os arquivos descritos aqui (com exceção do .jar) são provenientes do pacote (package) "classes", no qual está a
+fonte da prática.
+
+Fatorial.java - arquivo que contém os métodos disponibilizados pela classe "Fatorial"
+Pratica019.java - parte dos projetos em que se concentra os elementos de código em Java.
+Pratica019.form - arquivo que centraliza os elementos da GUI em um painel visual.
+Pratica019.jar - arquivo executável deste projeto. Baixe e teste você mesmo!
+README - o arquivo de apresentação e descrição desta prática.
+
+
+Materiais de referência:
+VÍDEO - How to Create Executable Jar File in NetBeans IDE JAVA
+Link: https://www.youtube.com/watch?v=__f8OEP2ZHo
+Um vídeo curto no qual há uma breve explicação de como gerar um arquivo executável (.jar) deste projeto.
+
+PERGUNTA - netbeans: How to put some title in the title bar
+Link: https://stackoverflow.com/questions/7510009/netbeans-how-to-put-some-title-in-the-title-bar
+Um usuário teve sua questão respondida no StackOverflow. No caso, a dúvida era sobre como inserir um título na janela do
+Swing.
+
+PERGUNTA - How to limit JSpinner
+Link: https://stackoverflow.com/questions/15880844/how-to-limit-jspinner/15881289#15881289
+Um usuário teve sua questão respondida no StackOverflow. No caso, a dúvida era referente a como limitar os valores de um
+JSpinner. Enquanto que no Intellij eu não consegui realizar esta ação, no NetBeans isso foi muito simples.
+
+VÍDEO - Exercícios de Java #15 - Curso de Java
+Link: https://www.youtube.com/watch?v=Fh5s0RUjhmQ
+Vídeo que apresenta a proposta desta prática.
+
+
+Comentários:
+Devo dizer que após a minha pausa de alguns meses longe de programação, eu estava ansioso por retomar os conceitos de
+métodos e encapsulamento. É realmente elegante a manera pela qual é possível reaproveitar linhas de código, isolar
+blocos de programas e inserir novas funcionalidades por meio dos métodos.
+
+Devo dizer que apesar de algumas dificuldades com a interface do NetBeans a criação das práticas em Swing nessa IDE foi
+bem mais agradável em relação ao Intellij. Em contrapartida, escrever as linhas de código no Intellij em si é muito mais
+simples.
+
+Estarei trabalhando com as duas IDEs, ciente agora das interfaces de cada uma.
+
+E este é o último exercício prático do módulo "iniciante" de Java do Curso em Vídeo. As práticas continuarão a serem
+produzidas, mas provavelmente estarei procurando desenvolvê-las em novos repositórios se elas forem complexas o
+bastante.
