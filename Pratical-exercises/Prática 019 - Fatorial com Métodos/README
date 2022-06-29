@@ -1,4 +1,4 @@
-Pratica 019 - Fatorial com Métodos
+Prática 019 - Fatorial com Métodos
 Este programa apresenta uma interface na qual um usuário pode inserir um número natural e que o programa poderá calcular
 o valor do respectivo fatorial a apresentar a expressão em uma String. Como este é um exercício para a introdução de
 Métodos em Java, foram criadas rotinas que calculam e devolvem o resultado e a String de apresentação diretamente ao
