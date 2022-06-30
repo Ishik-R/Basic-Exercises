@@ -1,0 +1,35 @@
+/* 8 kyu - Will there be enough space?
+ * https://www.codewars.com/kata/5875b200d520904a04000003/java
+ * Java
+ *
+ *  Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he 
+ * sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+ *
+ * You have to write a function that accepts three parameters:
+ *
+ *    - cap is the amount of people the bus can hold excluding the driver.
+ *    - on is the number of people on the bus excluding the driver.
+ *    - wait is the number of people waiting to get on to the bus excluding the driver.
+ * 
+ * If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+        int capacity = 20;
+        int onBus = 7;
+        int waiting = 20;
+
+        if(enough(capacity, onBus, waiting) == 0)
+            System.out.println("There is enough space!");
+        else
+            System.out.println("Oh no! Bob can't take " + enough(capacity, onBus, waiting) + " passengers.");
+    }
+
+    public static int enough(int cap, int on, int wait) {
+        return cap - on >= wait ? 0 : on + wait - cap;
+    }
+}
