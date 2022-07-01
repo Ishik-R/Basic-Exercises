@@ -1,0 +1,17 @@
+/* 8 kyu - Transportation on vacation
+ * https://www.codewars.com/kata/568d0dd208ee69389d000016/python
+ * Python
+ *
+ * Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+ * Write a code that gives out the total amount for different days(d).
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+def rental_car_cost(d):
+    if d >= 7:
+        return (d*40)-50
+    elif d >= 3:
+        return (d*40)-20
+    else:
+        return d*40
