@@ -1,0 +1,29 @@
+/* 8 kyu - Grasshopper - Grade book
+ * https://www.codewars.com/kata/55cbd4ba903825f7970000f5/java
+ * Java
+ *
+ * Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+//Minha solução:
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Sua nota final é : " + getGrade(97, 23, 99));
+    }
+
+    public static char getGrade(int s1, int s2, int s3) {
+        int g = (s1 + s2 + s3)/3;
+        if(g < 60)
+            return 'F';
+        else if(g < 70)
+            return 'D';
+        else if(g < 80)
+            return 'C';
+        else if(g < 90)
+            return 'B';
+        else
+            return 'A';
+    }
+}
