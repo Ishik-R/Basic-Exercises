@@ -1,0 +1,29 @@
+/* 6 kyu - Create Phone Number
+ * https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/java
+ * Java
+ *
+ * Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+ 
+//Minha solução:
+import java.util.Arrays;
+
+public class Main {
+  public static void main(String[] args) {
+    int[] numbers = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+
+    String output = Arrays.toString(numbers);
+    output = output.replaceAll(", ", "");
+
+    StringBuilder sb = new StringBuilder(output);
+    sb.deleteCharAt(output.length() - 1);
+    sb.deleteCharAt(0);
+    sb.insert(6,"-");
+    sb.insert(3, ") ");
+    sb.insert(0, "(");
+
+    System.out.println(sb);
+  }
+}
