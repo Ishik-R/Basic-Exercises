@@ -1,0 +1,13 @@
+/* 8 kyu - Opposite number
+ * https://www.codewars.com/kata/56dec885c54a926dcd001095/train/java
+ * Java
+ *
+ * Very simple, given an integer or a floating-point number, find its opposite.
+ *
+ * (lembrando que esta é uma versão que eu fiz para não disponibilizar diretamente minha solução do Codewars)
+ */
+
+public static void main(String[] args) {
+  int number = 9;
+  System.out.println("O oposto de " + number + " é: " + number * (-1));
+}
