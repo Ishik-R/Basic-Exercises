@@ -9,7 +9,7 @@
 print('\nEXERCÍCIO 22 - Analisador de Nomes')
 print('--' * 16)
 
-nome = input(str('Digite seu ome completo: '))
+nome = input(str('Digite seu nome completo: '))
 pNome = nome.split()[0]
 
 print(f'Exibição de todas as letras sendo maiúsculas: {nome.upper()}')
