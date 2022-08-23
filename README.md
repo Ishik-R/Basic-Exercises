@@ -18,3 +18,8 @@ This repository is supposed to host the exercises i've completed in my initial p
 
 *28/06/2022 - "Java Básico - Curso em Vídeo" IS FINISHED*\
  Pratically after a month I've finished a basic free course of Java. I needed to remember some concepts and I wanted to start making some more pratical exercises. The "Curso em Vídeo" offered a great experience to me. I've learned how to make simple programs in Swing (and was introduced to JavaFX too). All of the pratices from this course are in "Pratical-exercises". Well, now I think that I've should have named it differently, but it will stay with that name. Now I'm aiming at lerning how to integrate my programs with databases. I'm feeling pretty confident.
+
+*28/06/2022 - "Python 3 – Mundo 1 - Curso em Vídeo" IS FINISHED*\
+ I've keeping a habit of trying to go through the basic courses. My rythm has been slower this past months, I'm struggling against my self-steem, but I'm trying not to lose the touch with programming. I've should have finished such basic course much faster, but at my current mental health I'm very proud to just have compleated something. I think I need to aim to more complex projects now, and I hope to keep this confidence.
+
+This course is, again, from the "Curso em Vídeo". A very basic module with the fundamentals of using Python: how to install it, print messages in the terminal, do the basic operations, import modules, implement IF - ELSE conditions and other functions. The "Mundo 1" (literally "World 1") programs are present in the folder "Curso-em-Video-Pyhton". They cover the "aulas" ("classes") 5 to 11 and "exercicios" (excercises") 5 to 35. 
