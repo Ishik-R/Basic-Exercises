@@ -6,7 +6,7 @@
 #  B) A soma dos valores da terceira coluna.
 #  C) O maior valor da segunda linha.
 
-print("\n#086 - Matriz em Python")
+print("\n#087 - Mais sobre Matriz em Python")
 print("--" * 16)
 m = [[],[],[]]
 sum_par = 0
