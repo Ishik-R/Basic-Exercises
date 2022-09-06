@@ -7,10 +7,6 @@
 #   B) Uma listagem com as pessoas mais pesadas.
 #   C) Uma listagem com as pessoas mais leves.
 
-from distutils.command.clean import clean
-from turtle import clear
-
-
 print("\n#084 - Lista composta e análise de dados")
 print("--" * 16)
 pessoas = list() 
@@ -53,7 +49,7 @@ if len(leve) == 1:
 else:
     print("Pessoas com esse peso: ", end="")
 for ent in leve:
-    print(f"{ent} /", end="")
+    print(f"{ent}  ", end="")
 print(f"\nMaior peso: {mai_peso}kg. ", end="")
 if len(pesado) == 1:
     print("Pessoa com esse peso: ", end="")
