@@ -1,0 +1,9 @@
+Tadeu;23
+Samira;20
+Claudia;64
+Roberta;32
+Victor;45
+Roger;37
+Renan;9
+Julia;28
+Robisvaldo;4
