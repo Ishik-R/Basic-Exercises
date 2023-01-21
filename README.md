@@ -33,7 +33,7 @@ This course is, once more, from the "Curso em Vídeo". This module is a direct s
 
 The "Mundo 2" ("World 2") programs are present in the folder "Curso-em-Video-Python". They cover the "aulas" ("classes") 12 to 15 and "exercicios" ("excercises") 36 to 71.
 
-### *21/01/2023 - "Python 3 – Mundo 3" from Curso em Vídeo IS FINISHED
+### *21/01/2023 - "Python 3 – Mundo 3" from Curso em Vídeo IS FINISHED*
 I was again a little off schedule. I still feel insecure about showing my studies and progress to the world, so being able to finally reach the end of the "Curso in Video" cycle is very rewarding.
 
 This course is, once more, from the "Curso em Video". This module is a direct sequence from "Python 3 - Mundo 2". New Python elements are introduced here: tuples, lists, dictionaries, functions, modules, error handling, and basic file handling.
