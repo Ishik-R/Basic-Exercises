@@ -1,0 +1,18 @@
+'''
+6kyu - first character that repeats
+https://www.codewars.com/kata/54f9f4d7c41722304e000bbb/train/python
+Python
+
+Find the first character that repeats in a String and return that character.
+
+first_dup('tweet') => 't'
+first_dup('like') => None
+This is not the same as finding the character that repeats first. In that case, an input of 'tweet' would yield 'e'.
+'''
+
+def first_dup(s):
+    for letter in s.strip():
+        if s.count(letter)>1:return letter
+    return None
+
+print(first_dup('tweetrd'))
